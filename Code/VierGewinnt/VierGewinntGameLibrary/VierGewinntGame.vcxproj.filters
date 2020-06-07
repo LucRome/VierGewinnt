@@ -33,6 +33,27 @@
     <ClInclude Include="Team.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\4gewinnt\Horizontal.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4gewinnt\Mensch.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4gewinnt\Menü.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4gewinnt\Schlau.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4gewinnt\Spieler.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4gewinnt\Vertikal.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4gewinnt\Zufall.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VierGewinntGame.cpp">
@@ -51,6 +72,30 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Team.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\4gewinnt.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Horizontal.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Mensch.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Menü.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Schlau.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Spieler.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Vertikal.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\4gewinnt\Zufall.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
