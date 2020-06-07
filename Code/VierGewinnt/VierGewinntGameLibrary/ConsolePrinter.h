@@ -2,13 +2,13 @@
 #include <string>
 #include <iostream>
 #include <memory>
-
-class Spielsteine;
+#include "Spielfeld.h"
+#include "Spielsteine.h"
 
 class ConsolePrinter
 {
 public: 
-	static void printField();
+	static void printField(std::shared_ptr<Spielfeld> spielfeld);
 	static void printError(std::string message);
 	template<typename T> static void askValue(std::string varName);
 };

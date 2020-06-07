@@ -1,4 +1,4 @@
-#include "Menü.h"
+#include "Menue.h"
 #include "Spieler.h"
 #include "Horizontal.h"
 #include "Vertikal.h"
@@ -6,15 +6,15 @@
 #include "Zufall.h"
 #include "Schlau.h"
 
-Menü::Menü()
+Menue::Menue()
 {
 }
 
-Menü::~Menü()
+Menue::~Menue()
 {
 }
 
-void Menü::Spielbeginn()
+void Menue::Spielbeginn()
 {
 	std::cout << "Wieviele Spieler spielen?" << std::endl;
 	std::cin >> Spieleranzahl;
@@ -71,12 +71,12 @@ void Menü::Spielbeginn()
 	}
 }
 
-void Menü::Teamausgeben(std::shared_ptr<Team> Team)
+void Menue::Teamausgeben(std::shared_ptr<Team> Team)
 {
 	std::cout << Team->getName() << std::endl;
 }
 
-void Menü::horizontalAusgeben(std::shared_ptr<Horizontal> horizon)
+void Menue::horizontalAusgeben(std::shared_ptr<Horizontal> horizon)
 {
 	std::cout << horizon->getName() << std::endl;
 }

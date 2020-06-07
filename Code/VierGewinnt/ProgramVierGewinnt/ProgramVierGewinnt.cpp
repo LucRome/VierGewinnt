@@ -1,20 +1,20 @@
 // ProgramVierGewinnt.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
 
+#include <string.h>
+#include <memory>
 #include <iostream>
+#include <Horizontal.h>
+#include <Mensch.h>
+#include <Schlau.h>
+#include <Spieler.h>
+#include <Team.h>
+#include <Vertikal.h>
+#include <Zufall.h>
+#include "Menue.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	auto menü1 = std::make_unique<Menue>();
+	auto team1 = std::make_shared<Team>("Harald");
+	auto horizontal1 = std::make_shared<Horizontal>(team1);
+	menü1->horizontalAusgeben(horizontal1);
 }
-
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
-
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
-//   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcodeverwaltung.
-//   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
-//   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.

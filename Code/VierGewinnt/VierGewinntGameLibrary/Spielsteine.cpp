@@ -9,3 +9,8 @@ Spielsteine::Spielsteine(Team& team)
 Spielsteine::~Spielsteine()
 {
 }
+
+char Spielsteine::getSymbol() const
+{
+	return m_team.getSymbol();
+}

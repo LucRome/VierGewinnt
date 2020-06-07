@@ -11,11 +11,11 @@ class Mensch;
 class Zufall;
 class Schlau;
 
-class Menü
+class Menue
 {
 public:
-	Menü();
-	~Menü();
+	Menue();
+	~Menue();
 
 	//void Teambeitreten(std::shared_ptr<Spieler> Spieler, std::shared_ptr<Team> Team);
 	void Spielbeginn();

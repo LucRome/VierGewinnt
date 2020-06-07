@@ -1,7 +1,16 @@
 #include "Spielfeld.h"
+#include <memory>
 
-std::weak_ptr<Spielsteine> Spielfeld::getPosition(int x, int y) const
+Spielfeld::Spielfeld()
 {
+}
 
-    return m_spielfeld[x][y];
+int Spielfeld::getSize() const
+{
+    return m_size;
+}
+
+std::shared_ptr<Spielsteine> Spielfeld::getPosition(int spalte, int zeile) const
+{
+    return std::make_shared<Spielsteine>(m_spielfeld[zeile][spalte]);
 }
