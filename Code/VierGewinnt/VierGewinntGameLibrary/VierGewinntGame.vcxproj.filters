@@ -33,25 +33,25 @@
     <ClInclude Include="Team.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Horizontal.h">
+    <ClInclude Include="Horizontal.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Mensch.h">
+    <ClInclude Include="Mensch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Menü.h">
+    <ClInclude Include="Menü.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Schlau.h">
+    <ClInclude Include="Schlau.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Spieler.h">
+    <ClInclude Include="Spieler.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Vertikal.h">
+    <ClInclude Include="Vertikal.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\4gewinnt\Zufall.h">
+    <ClInclude Include="Zufall.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,28 +74,28 @@
     <ClCompile Include="Team.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\4gewinnt.cpp">
+    <ClCompile Include="4gewinnt.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Horizontal.cpp">
+    <ClCompile Include="Horizontal.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Mensch.cpp">
+    <ClCompile Include="Mensch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Menü.cpp">
+    <ClCompile Include="Menü.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Schlau.cpp">
+    <ClCompile Include="Schlau.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Spieler.cpp">
+    <ClCompile Include="Spieler.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Vertikal.cpp">
+    <ClCompile Include="Zufall.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\4gewinnt\Zufall.cpp">
+    <ClCompile Include="Vertikal.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

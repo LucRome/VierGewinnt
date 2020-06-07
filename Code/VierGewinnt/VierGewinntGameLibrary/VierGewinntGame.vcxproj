@@ -147,40 +147,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\4gewinnt\Horizontal.h" />
-    <ClInclude Include="..\4gewinnt\Mensch.h" />
-    <ClInclude Include="..\4gewinnt\Menü.h" />
-    <ClInclude Include="..\4gewinnt\Schlau.h" />
-    <ClInclude Include="..\4gewinnt\Spieler.h" />
-    <ClInclude Include="..\4gewinnt\Vertikal.h" />
-    <ClInclude Include="..\4gewinnt\Zufall.h" />
     <ClInclude Include="ConsolePrinter.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Horizontal.h" />
+    <ClInclude Include="Mensch.h" />
+    <ClInclude Include="Menü.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Schlau.h" />
+    <ClInclude Include="Spieler.h" />
     <ClInclude Include="Spielfeld.h" />
     <ClInclude Include="Spielsteine.h" />
     <ClInclude Include="Team.h" />
+    <ClInclude Include="Vertikal.h" />
+    <ClInclude Include="Zufall.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\4gewinnt\4gewinnt.cpp" />
-    <ClCompile Include="..\4gewinnt\Horizontal.cpp" />
-    <ClCompile Include="..\4gewinnt\Mensch.cpp" />
-    <ClCompile Include="..\4gewinnt\Menü.cpp" />
-    <ClCompile Include="..\4gewinnt\Schlau.cpp" />
-    <ClCompile Include="..\4gewinnt\Spieler.cpp" />
-    <ClCompile Include="..\4gewinnt\Vertikal.cpp" />
-    <ClCompile Include="..\4gewinnt\Zufall.cpp" />
+    <ClCompile Include="4gewinnt.cpp" />
     <ClCompile Include="ConsolePrinter.cpp" />
+    <ClCompile Include="Horizontal.cpp" />
+    <ClCompile Include="Mensch.cpp" />
+    <ClCompile Include="Menü.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Schlau.cpp" />
+    <ClCompile Include="Spieler.cpp" />
     <ClCompile Include="Spielfeld.cpp" />
     <ClCompile Include="Spielsteine.cpp" />
     <ClCompile Include="Team.cpp" />
+    <ClCompile Include="Vertikal.cpp" />
     <ClCompile Include="VierGewinntGame.cpp" />
+    <ClCompile Include="Zufall.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
