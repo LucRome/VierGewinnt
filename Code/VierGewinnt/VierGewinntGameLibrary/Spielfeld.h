@@ -12,11 +12,13 @@ public:
 	bool isVoll() const;
 	int getSize() const;
 	std::shared_ptr<Spielsteine> getPosition(int x, int y) const;
+
 	
 
 protected:
 	static const int m_size = 4;
 	std::unique_ptr<Spielsteine> m_spielfeld[m_size][m_size] = { nullptr };
+
 };
 
 

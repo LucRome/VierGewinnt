@@ -4,3 +4,9 @@ Code/.vs/
 .vs/
 *.db
 *.ipch
+*.obj
+*.idb
+*.log
+*.pdb
+*.tlog
+*.pch

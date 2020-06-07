@@ -14,3 +14,8 @@ char Spielsteine::getSymbol() const
 {
 	return m_team.getSymbol();
 }
+
+void Spielsteine::setZähler(int zähler)
+{
+	m_counter = zähler;
+}
