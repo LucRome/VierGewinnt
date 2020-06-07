@@ -39,9 +39,6 @@
     <ClInclude Include="Mensch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Menü.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Schlau.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -52,6 +49,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Zufall.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Regelwerk.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,16 +77,10 @@
     <ClCompile Include="Team.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="4gewinnt.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Horizontal.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Mensch.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Menü.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Schlau.cpp">
@@ -96,6 +93,12 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Vertikal.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Regelwerk.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

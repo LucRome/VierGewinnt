@@ -14,7 +14,7 @@ GameController::~GameController()
 
 void GameController::playStep()
 {
-	ConsolePrinter::printField()
+	ConsolePrinter::printField();
 }
 
 void GameController::spielerwechsel()
