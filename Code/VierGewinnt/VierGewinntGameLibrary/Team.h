@@ -11,14 +11,14 @@ public:
 	Team(std::string name, char symbol);
 	~Team();
 
-	void getName() const;
-	void getSymbol() const;
+	std::string getName() const;
+	char getSymbol() const;
 
 
 
 protected:
 	const std::string m_name;
-	const char symbol;
+	const char m_symbol;
 };
 
  
