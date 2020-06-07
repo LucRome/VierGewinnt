@@ -1,0 +1,6 @@
+
+Code/.vs/
+.git/
+.vs/
+*.db
+*.ipch
