@@ -57,6 +57,9 @@
     <ClInclude Include="Regelwerk.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VierGewinntGame.cpp">

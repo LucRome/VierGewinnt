@@ -1,5 +1,8 @@
 #pragma once
+#include "Enum.h"
 #include <memory>
+#include "Team.h"
+#include "Spielsteine.h"
 
 class Spielsteine;
 
@@ -11,6 +14,7 @@ public:
 	~Spielfeld();
 	bool isVoll() const;
 	int getSize() const;
+	setStoneMsg placeStone(Team& team, int x); //noch sichergehen, dass ein Team nur 1x setzt
 	std::shared_ptr<Spielsteine> getPosition(int x, int y) const;
 
 	

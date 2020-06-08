@@ -15,3 +15,7 @@ std::string Schlau::getName()
 {
 	return m_name;
 }
+
+void Schlau::playStep(Spielfeld& spielfeld)
+{
+}

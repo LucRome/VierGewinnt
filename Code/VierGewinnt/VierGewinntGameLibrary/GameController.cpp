@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "GameController.h"
+#include "Spieler.h"
 
 
 GameController::GameController(std::vector<std::shared_ptr<Spieler>> spieler)
@@ -14,7 +15,9 @@ GameController::~GameController()
 
 void GameController::playStep()
 {
-	ConsolePrinter::printField();
+	ConsolePrinter::printField(m_spielfeld);
+	m_spielerDran->playStep(*m_spielfeld);
+	spielerwechsel();
 }
 
 void GameController::spielerwechsel()

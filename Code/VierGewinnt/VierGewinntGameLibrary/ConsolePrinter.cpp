@@ -25,3 +25,8 @@ void ConsolePrinter::printField(std::shared_ptr<Spielfeld> spielfeld)
 		std::cout << std::endl;
 	}
 }
+
+void ConsolePrinter::printMessage(std::string message)
+{
+	std::cout << message << std::endl;
+}

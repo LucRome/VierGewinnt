@@ -15,3 +15,7 @@ std::string Vertikal::getName()
 {
 	return m_name;
 }
+
+void Vertikal::playStep(Spielfeld& spielfeld)
+{
+}

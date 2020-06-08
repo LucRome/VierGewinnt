@@ -6,6 +6,7 @@ class Spielsteine;
 
 class Regelwerk
 {
+public:
 	Regelwerk();
 	~Regelwerk();
 	std::shared_ptr<Spielsteine> waagerechtCheck(std::shared_ptr<Spielfeld> spielfeld, std::shared_ptr<Spielsteine> meinStein);
