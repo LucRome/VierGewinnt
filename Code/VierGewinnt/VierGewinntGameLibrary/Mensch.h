@@ -11,9 +11,5 @@ public:
     ~Mensch() override;
     std::string getName();
     void playStep(Spielfeld& spielfeld) override;
-
-protected:
-    std::string m_name;
-    const std::shared_ptr<Team> m_team;
 };
 

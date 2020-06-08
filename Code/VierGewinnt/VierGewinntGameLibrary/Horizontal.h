@@ -9,9 +9,5 @@ public:
     ~Horizontal() override;
     std::string getName();
     void playStep(Spielfeld& spielfeld) override;
-
-protected:
-    std::string m_name;
-    std::shared_ptr<Team> m_team;
 };
 
