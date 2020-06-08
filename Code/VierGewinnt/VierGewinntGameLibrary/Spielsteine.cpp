@@ -3,6 +3,7 @@
 
 Spielsteine::Spielsteine(Team& team)
 	:m_team(team)
+	, m_counter(0) //nehme mal an 0 passt
 {
 }
 
