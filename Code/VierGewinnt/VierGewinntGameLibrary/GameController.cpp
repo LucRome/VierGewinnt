@@ -13,6 +13,13 @@ GameController::~GameController()
 {
 }
 
+void GameController::playGame() //Erstmal: spielen bis Feld voll
+{
+	while (!m_spielfeld->isVoll()) {
+		playStep();
+	}
+}
+
 void GameController::playStep()
 {
 	ConsolePrinter::printField(m_spielfeld);
