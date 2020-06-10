@@ -22,8 +22,6 @@ protected:
 	std::vector<std::shared_ptr<Spieler>> m_spieler;
 
 	int m_teamDran;
-	std::shared_ptr<Spielfeld> m_spielfeld = std::make_shared<Spielfeld>(); //muss des überhaupt n Pointer sein?
+	Spielfeld m_spielfeld = Spielfeld();
 	std::shared_ptr<Spieler> m_spielerDran;
-	
-	
 };

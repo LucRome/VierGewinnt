@@ -22,7 +22,6 @@ public:
 protected:
 	static const int m_size = 4;
 	std::unique_ptr<Spielsteine> m_spielfeld[m_size][m_size] = { nullptr };
-
 };
 
 

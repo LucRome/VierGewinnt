@@ -15,7 +15,7 @@ GameController::~GameController()
 
 void GameController::playGame() //Erstmal: spielen bis Feld voll
 {
-	while (!m_spielfeld->isVoll()) {
+	while (!m_spielfeld.isVoll()) {
 		playStep();
 	}
 }
@@ -23,7 +23,7 @@ void GameController::playGame() //Erstmal: spielen bis Feld voll
 void GameController::playStep()
 {
 	ConsolePrinter::printField(m_spielfeld);
-	m_spielerDran->playStep(*m_spielfeld);
+	m_spielerDran->playStep(m_spielfeld);
 	spielerwechsel();
 }
 

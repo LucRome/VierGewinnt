@@ -8,7 +8,7 @@
 class ConsolePrinter
 {
 public: 
-	static void printField(std::shared_ptr<Spielfeld> spielfeld);
+	static void printField(Spielfeld& spielfeld);
 	static void printMessage(std::string message);
 	template<typename T> static T askValue(std::string varName);
 };
