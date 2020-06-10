@@ -15,3 +15,8 @@ std::shared_ptr<Team> Spieler::getTeam()
 {
 	return m_team;
 }
+
+std::string Spieler::getName()
+{
+	return m_name;
+}

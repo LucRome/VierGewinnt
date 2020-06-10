@@ -9,10 +9,6 @@ Schlau::~Schlau()
 {
 }
 
-std::string Schlau::getName()
-{
-	return m_name;
-}
 
 int Schlau::chooseRow(Spielfeld& spielfeld)
 {

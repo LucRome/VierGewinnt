@@ -7,7 +7,6 @@ class Horizontal :
 public:
     Horizontal(std::shared_ptr<Team> team, std::string name = "Ernie Macmillan");
     ~Horizontal() override;
-    std::string getName();
-    int playStep(Spielfeld& spielfeld) override;
+    int chooseRow(Spielfeld& spielfeld) override;
 };
 

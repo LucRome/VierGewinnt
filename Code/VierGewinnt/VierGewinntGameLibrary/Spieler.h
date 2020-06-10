@@ -11,6 +11,7 @@ public:
 	Spieler(std::shared_ptr<Team> team, std::string name);
 	virtual ~Spieler();
 	std::shared_ptr<Team> getTeam();
+	std::string getName();
 	virtual int chooseRow(Spielfeld& spielfeld) = 0; //Darf diese Klasse abstract sein?
 
 protected:

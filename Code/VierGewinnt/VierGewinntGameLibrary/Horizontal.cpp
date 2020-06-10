@@ -9,11 +9,6 @@ Horizontal::~Horizontal()
 {
 }
 
-std::string Horizontal::getName()
-{
-	return m_name;
-}
-
-int Horizontal::playStep(Spielfeld& spielfeld)
+int Horizontal::chooseRow(Spielfeld& spielfeld)
 {
 }

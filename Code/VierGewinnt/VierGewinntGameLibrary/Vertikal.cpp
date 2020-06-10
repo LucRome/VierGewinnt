@@ -9,11 +9,6 @@ Vertikal::~Vertikal()
 {
 }
 
-std::string Vertikal::getName()
-{
-	return m_name;
-}
-
-int Vertikal::playStep(Spielfeld& spielfeld)
+int Vertikal::chooseRow(Spielfeld& spielfeld)
 {
 }

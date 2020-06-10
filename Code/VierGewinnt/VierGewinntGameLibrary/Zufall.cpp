@@ -9,11 +9,6 @@ Zufall::~Zufall()
 {
 }
 
-std::string Zufall::getName()
-{
-	return m_name;
-}
-
-int Zufall::playStep(Spielfeld& spielfeld)
+int Zufall::chooseRow(Spielfeld& spielfeld)
 {
 }

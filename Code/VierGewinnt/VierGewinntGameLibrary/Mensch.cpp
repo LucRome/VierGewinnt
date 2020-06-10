@@ -12,11 +12,6 @@ Mensch::~Mensch()
 {
 }
 
-std::string Mensch::getName()
-{
-	return m_name;
-}
-
 int Mensch::chooseRow(Spielfeld& spielfeld)
 {
 	int spalte = 0;
