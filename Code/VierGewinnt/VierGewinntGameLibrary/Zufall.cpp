@@ -14,6 +14,6 @@ std::string Zufall::getName()
 	return m_name;
 }
 
-void Zufall::playStep(Spielfeld& spielfeld)
+int Zufall::playStep(Spielfeld& spielfeld)
 {
 }

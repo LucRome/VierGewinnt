@@ -14,6 +14,6 @@ std::string Horizontal::getName()
 	return m_name;
 }
 
-void Horizontal::playStep(Spielfeld& spielfeld)
+int Horizontal::playStep(Spielfeld& spielfeld)
 {
 }

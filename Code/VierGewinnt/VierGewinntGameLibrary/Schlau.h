@@ -8,6 +8,6 @@ public:
     Schlau(std::shared_ptr<Team> team, std::string name = "Severus Snape");
     ~Schlau() override;
     std::string getName();
-    void playStep(Spielfeld& spielfeld) override;
+    int chooseRow(Spielfeld& spielfeld) override;
 };
 

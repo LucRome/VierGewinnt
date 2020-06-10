@@ -8,6 +8,6 @@ public:
     Zufall(std::shared_ptr<Team> team, std::string name = "Luna Lovegood");
     ~Zufall() override;
     std::string getName();
-    void playStep(Spielfeld& spielfeld) override;
+    int chooseRow(Spielfeld& spielfeld) override;
 };
 

@@ -17,13 +17,13 @@ std::string Mensch::getName()
 	return m_name;
 }
 
-void Mensch::playStep(Spielfeld& spielfeld)
+int Mensch::chooseRow(Spielfeld& spielfeld)
 {
 	int spalte = 0;
 	setStoneMsg msg;
 	do {
 		spalte = ConsolePrinter::askValue<int>("Spalte");
-		msg = spielfeld.placeStone(*m_team, spalte);
+		msg = spielfeld.possiblePlacement(spalte);
 		if (msg == setStoneMsg::outOfBounds) {
 			ConsolePrinter::printMessage("The value of the Row is to high!");
 		}

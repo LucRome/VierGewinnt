@@ -15,6 +15,7 @@ public:
 	bool isVoll() const;
 	int getSize() const;
 	setStoneMsg placeStone(Team& team, int x); //noch sichergehen, dass ein Team nur 1x setzt
+	setStoneMsg possiblePlacement(int spalte);
 	std::shared_ptr<Spielsteine> getPosition(int x, int y) const;
 
 	

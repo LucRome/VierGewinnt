@@ -22,8 +22,10 @@ void GameController::playGame() //Erstmal: spielen bis Feld voll
 
 void GameController::playStep()
 {
+	int spalte = 0;
 	ConsolePrinter::printField(m_spielfeld);
-	m_spielerDran->playStep(m_spielfeld);
+	spalte = m_spielerDran->chooseRow(m_spielfeld);
+	m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
 	spielerwechsel();
 }
 
