@@ -2,6 +2,7 @@
 #include <memory>
 #include <vector>
 #include "ConsolePrinter.h"
+#include "pch.h"
 
 class Team;
 class Spieler;
@@ -22,6 +23,6 @@ protected:
 	std::vector<std::shared_ptr<Spieler>> m_spieler;
 
 	int m_teamDran;
-	Spielfeld m_spielfeld = Spielfeld();
+	Spielfeld m_spielfeld;
 	std::shared_ptr<Spieler> m_spielerDran;
 };

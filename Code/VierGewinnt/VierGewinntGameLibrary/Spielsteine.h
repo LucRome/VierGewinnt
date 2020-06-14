@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 #include "Team.h"
-
+#include "pch.h"
 
 class Spielsteine
 {
@@ -13,7 +13,7 @@ public:
 
 	
 protected:
-	const Team& m_team;	//Spielstein wird von Team erstellt -> Team ist vorhanden, gibt auch keinen Grund Team zu ändern
+	Team& m_team;	//Spielstein wird von Team erstellt -> Team ist vorhanden, gibt auch keinen Grund Team zu ändern
 	int m_counter;
 };
 

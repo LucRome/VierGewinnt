@@ -4,6 +4,7 @@
 #include <memory>
 #include "Spielfeld.h"
 #include "Spielsteine.h"
+#include "pch.h"
 
 class ConsolePrinter
 {
@@ -17,7 +18,8 @@ template<typename T>
 inline T ConsolePrinter::askValue(std::string varName)
 {
 	T value;
-	std::cout << varName << " (" << T << "): ";
+	std::cout << varName << " : ";
 	std::cin >> value;
 
+	return value;
 }

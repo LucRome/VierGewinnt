@@ -1,6 +1,7 @@
 #include "Mensch.h"
 #include "ConsolePrinter.h"
 #include "Enum.h"
+#include "pch.h"
 
 
 Mensch::Mensch(std::shared_ptr<Team> team, std::string name)
@@ -26,4 +27,6 @@ int Mensch::chooseRow(Spielfeld& spielfeld)
 			ConsolePrinter::printMessage("The row is already full!");
 		}
 	} while (msg != setStoneMsg::success);
+	
+	return spalte;
 }

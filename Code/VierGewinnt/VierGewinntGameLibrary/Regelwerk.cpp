@@ -1,7 +1,8 @@
-#include "pch.h"
+//#include "pch.h"
 #include "Regelwerk.h"
 #include "Spielfeld.h"
 #include "Spielsteine.h"
+#include "pch.h"
 
 
 Regelwerk::Regelwerk() {

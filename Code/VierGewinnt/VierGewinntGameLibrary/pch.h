@@ -9,5 +9,20 @@
 
 // Fügen Sie hier Header hinzu, die vorkompiliert werden sollen.
 #include "framework.h"
+#include "Enum.h"
+#include "ConsolePrinter.h"
+#include "GameController.h"
+#include "Horizontal.h"
+#include "Mensch.h"
+#include "Regelwerk.h"
+#include "Schlau.h"
+#include "Spieler.h"
+#include "Spielfeld.h"
+#include "Spielsteine.h"
+#include "Team.h"
+#include "Vertikal.h"
+#include "Zufall.h"
+
+
 
 #endif //PCH_H

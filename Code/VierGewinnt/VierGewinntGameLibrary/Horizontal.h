@@ -1,5 +1,6 @@
 #pragma once
 #include "Spieler.h"
+#include "pch.h"
 
 class Horizontal :
     public Spieler

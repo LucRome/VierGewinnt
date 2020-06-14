@@ -1,5 +1,5 @@
 #include "Spieler.h"
-
+#include "pch.h"
 
 Spieler::Spieler(std::shared_ptr<Team> team, std::string name)
 	:m_name(name)

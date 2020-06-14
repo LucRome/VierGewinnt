@@ -2,7 +2,7 @@
 #include "Spieler.h"
 #include "Spielfeld.h"
 #include <memory>
-
+#include "pch.h"
 class Mensch :
     public Spieler
 {
