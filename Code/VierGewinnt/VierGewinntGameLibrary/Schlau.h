@@ -1,6 +1,6 @@
 #pragma once
 #include "Spieler.h"
-#include "pch.h"
+//#include "pch.h"
 class Schlau :
     public Spieler
 {

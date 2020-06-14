@@ -2,7 +2,7 @@
 #include <memory>
 #include <vector>
 #include "ConsolePrinter.h"
-#include "pch.h"
+//#include "pch.h"
 
 class Team;
 class Spieler;

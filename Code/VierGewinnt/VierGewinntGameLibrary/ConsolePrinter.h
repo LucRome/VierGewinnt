@@ -4,7 +4,7 @@
 #include <memory>
 #include "Spielfeld.h"
 #include "Spielsteine.h"
-#include "pch.h"
+//#include "pch.h"
 
 class ConsolePrinter
 {

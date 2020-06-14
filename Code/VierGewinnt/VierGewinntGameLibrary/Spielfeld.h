@@ -3,7 +3,7 @@
 #include <memory>
 #include "Team.h"
 #include "Spielsteine.h"
-#include "pch.h"
+//#include "pch.h"
 
 class Spielsteine;
 

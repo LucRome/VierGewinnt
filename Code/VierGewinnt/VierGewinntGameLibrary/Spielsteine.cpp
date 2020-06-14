@@ -1,4 +1,4 @@
-#include "pch.h"
+//#include "pch.h"
 #include "Spielsteine.h"
 
 Spielsteine::Spielsteine(Team& team)

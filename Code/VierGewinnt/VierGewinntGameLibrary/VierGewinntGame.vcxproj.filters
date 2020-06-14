@@ -65,9 +65,6 @@
     <ClCompile Include="VierGewinntGame.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="ConsolePrinter.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>

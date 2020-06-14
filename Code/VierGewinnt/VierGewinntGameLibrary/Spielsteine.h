@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 #include "Team.h"
-#include "pch.h"
+//#include "pch.h"
 
 class Spielsteine
 {

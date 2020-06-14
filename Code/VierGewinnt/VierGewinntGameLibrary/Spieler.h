@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <memory>
-#include "pch.h"
+//#include "pch.h"
 class Team;
 class Spielfeld;
 

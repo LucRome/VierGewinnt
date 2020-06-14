@@ -1,5 +1,5 @@
 #include "Schlau.h"
-#include "pch.h"
+//#include "pch.h"
 
 Schlau::Schlau(std::shared_ptr<Team> team, std::string name)
 	:Spieler(team, name)

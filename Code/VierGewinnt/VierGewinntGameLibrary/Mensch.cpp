@@ -1,7 +1,7 @@
 #include "Mensch.h"
 #include "ConsolePrinter.h"
 #include "Enum.h"
-#include "pch.h"
+//#include "pch.h"
 
 
 Mensch::Mensch(std::shared_ptr<Team> team, std::string name)
