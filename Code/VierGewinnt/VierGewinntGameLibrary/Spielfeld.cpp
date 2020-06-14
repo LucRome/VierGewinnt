@@ -45,7 +45,8 @@ setStoneMsg Spielfeld::placeStone(Team& team, int spalte)
         while (m_spielfeld[zeile][spalte]) {    //"Von unten nach oben"
             zeile--;
         }
-        m_spielfeld[zeile][spalte] = std::make_unique<Spielsteine>(new Spielsteine(team));
+        Spielsteine s = Spielsteine(team);
+        m_spielfeld[zeile][spalte] = std::make_shared<Spielsteine>(s);
     }
     return msg;
 }
