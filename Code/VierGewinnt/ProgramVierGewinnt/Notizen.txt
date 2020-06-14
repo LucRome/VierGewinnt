@@ -1,5 +1,0 @@
-Mögliche Umgestaltung des Spielfelds:
-	Jedes Team hat nur 1 Spielstein
-	Spielfeld: Verweise auf 1 Spielstein
-	Sinnvoll?
-	Mit Zähler nicht möglich
