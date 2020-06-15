@@ -45,13 +45,7 @@ setStoneMsg Spielfeld::placeStone(Team& team, int spalte)
         while (m_spielfeld[zeile][spalte]) {    //"Von unten nach oben"
             zeile--;
         }
-//<<<<<<< HEAD
-        auto steini = std::make_unique<Spielsteine>(team);
-        m_spielfeld[zeile][spalte] = std::move(steini)/*std::make_unique<Spielsteine>(team)*/;
-//=======
-        Spielsteine s = Spielsteine(team);
-        m_spielfeld[zeile][spalte] = std::make_shared<Spielsteine>(s);
-//>>>>>>> 29ab50c411f9ea1a203e679327fedc4233550192
+        m_spielfeld[zeile][spalte] = std::make_shared<Spielsteine>(team);
     }
     return msg;
 }
@@ -72,5 +66,5 @@ setStoneMsg Spielfeld::possiblePlacement(int spalte)
 
 std::shared_ptr<Spielsteine> Spielfeld::getPosition(int spalte, int zeile) const
 {
-    return std::make_shared<Spielsteine>(m_spielfeld[zeile][spalte]);
+    return std::make_shared<Spielsteine>(*m_spielfeld[zeile][spalte]);
 }

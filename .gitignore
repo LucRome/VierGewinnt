@@ -11,3 +11,4 @@ Code/.vs/
 *.tlog
 *.pch
 *.TMP
+/Code/VierGewinnt/VierGewinntGameLibrary/x64/Debug
