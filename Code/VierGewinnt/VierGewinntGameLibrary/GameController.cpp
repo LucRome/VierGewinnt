@@ -25,6 +25,8 @@ void GameController::playStep()
 {
 	int spalte = 0;
 	ConsolePrinter::printField(m_spielfeld);
+	ConsolePrinter::printMessage("Spieler: ");
+	ConsolePrinter::printMessage(m_spielerDran->getName());
 	spalte = m_spielerDran->chooseRow(m_spielfeld);
 	m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
 	spielerwechsel();
