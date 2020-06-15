@@ -5,6 +5,7 @@
 #include "Mensch.h"
 #include "Zufall.h"
 #include "Schlau.h"
+#include "GameController.h"
 
 Menue::Menue()
 {
@@ -16,6 +17,7 @@ Menue::~Menue()
 
 void Menue::Spielbeginn()
 {
+	char symbol;
 	std::cout << "Wieviele Spieler spielen?" << std::endl;
 	std::cin >> Spieleranzahl;
 	std::cout << "wieviele Teams soll es geben?" << std::endl;
@@ -25,6 +27,8 @@ void Menue::Spielbeginn()
 		std::cout << "Welche Art Spieler soll Spieler" << i << " sein" << std::endl;
 		std::cout << "1=Mensch; 2=Vertikal Bot; 3=Horizontal Bot; 4=Schlauer Bot; 5=Zufalls Bot" << std::endl;
 		std::cin >> m_SpielerArt;
+		std::cout << "Symbol: ";
+		std::cin >> symbol;
 
 		switch (m_SpielerArt)
 		{
@@ -34,32 +38,32 @@ void Menue::Spielbeginn()
 			std::cin >> m_Spielername;
 			std::cout << "Wie soll dein Team heißen?" << std::endl;
 			std::cin >> m_Teamname;
-			m_Team[i] = std::make_shared<Team>(m_Teamname);
-			m_Spieler[i] = std::make_shared<Mensch>(m_Team[i], m_Spielername);
+			m_Team[i] = std::make_shared<Team>(m_Teamname, symbol);
+			m_Spieler.push_back(std::make_shared<Mensch>(m_Team[i], m_Spielername));
 			break;
 		}
 		case 2:
 		{
-			m_Team[i] = std::make_shared<Team>("Vertikale Loser");
-			m_Spieler[i] = std::make_shared<Vertikal>(m_Team[i]);
+			m_Team[i] = std::make_shared<Team>("Vertikale Loser", 'x');
+			m_Spieler.push_back(std::make_shared<Vertikal>(m_Team[i]));
 			break;
 		}
 		case 3:
 		{
-			m_Team[i] = std::make_shared<Team>("Horizontale Kleindenker");
-			m_Spieler[i] = std::make_shared<Horizontal>(m_Team[i]);
+			m_Team[i] = std::make_shared<Team>("Horizontale Kleindenker", '0');
+			m_Spieler.push_back(std::make_shared<Horizontal>(m_Team[i]));
 			break;
 		}
 		case 4:
 		{
-			m_Team[i] = std::make_shared<Team>("Die Planlosen");
-			m_Spieler[i] = std::make_shared<Zufall>(m_Team[i]);
+			m_Team[i] = std::make_shared<Team>("Die Planlosen", 'p');
+			m_Spieler.push_back(std::make_shared<Zufall>(m_Team[i]));
 			break;
 		}
 		case 5:
 		{
-			m_Team[i] = std::make_shared<Team>("Die Genialen");
-			m_Spieler[i] = std::make_shared<Schlau>(m_Team[i]);
+			m_Team[i] = std::make_shared<Team>("Die Genialen", 'v');
+			m_Spieler.push_back(std::make_shared<Schlau>(m_Team[i]));
 			break;
 		}
 		default:
@@ -68,7 +72,10 @@ void Menue::Spielbeginn()
 		}
 		}
 		//Teambeitreten(m_Spieler[i], m_Team[i]);
+		
 	}
+	GameController gameController = GameController(m_Spieler);
+	gameController.playGame();
 }
 
 void Menue::Teamausgeben(std::shared_ptr<Team> Team)

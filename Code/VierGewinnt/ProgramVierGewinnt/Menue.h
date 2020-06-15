@@ -24,7 +24,7 @@ public:
 	void horizontalAusgeben(std::shared_ptr<Horizontal> horizon);
 
 private:
-	std::shared_ptr<Spieler> m_Spieler[100];
+	std::vector<std::shared_ptr<Spieler>> m_Spieler;
 	int Spieleranzahl;
 	int m_SpielerID;
 	int m_SpielerArt;

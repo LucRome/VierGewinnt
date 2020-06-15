@@ -6,6 +6,7 @@ void ConsolePrinter::printField(Spielfeld& spielfeld)
 {
 	std::shared_ptr<Spielsteine> spielstein;
 	int size = spielfeld.getSize();
+	std::cout << " ";
 	for (int i = 0; i < size; i++) {
 		std::cout <<" "<< i;
 	}

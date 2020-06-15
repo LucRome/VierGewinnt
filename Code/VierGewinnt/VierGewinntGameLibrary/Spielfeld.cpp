@@ -54,7 +54,7 @@ setStoneMsg Spielfeld::possiblePlacement(int spalte)
 {
     setStoneMsg msg = setStoneMsg::success;
     if (spalte < m_size) {
-        if (!m_spielfeld[0][spalte]) {
+        if (m_spielfeld[0][spalte]) {
             msg = setStoneMsg::rowFull;
         }
     }
@@ -66,5 +66,5 @@ setStoneMsg Spielfeld::possiblePlacement(int spalte)
 
 std::shared_ptr<Spielsteine> Spielfeld::getPosition(int spalte, int zeile) const
 {
-    return std::make_shared<Spielsteine>(*m_spielfeld[zeile][spalte]);
+    return m_spielfeld[zeile][spalte];
 }
