@@ -19,6 +19,8 @@ void GameController::playGame() //Erstmal: spielen bis Feld voll
 	while (!m_spielfeld.isVoll()) {
 		playStep();
 	}
+	ConsolePrinter::printField(m_spielfeld);
+	ConsolePrinter::printMessage("Feld voll");
 }
 
 void GameController::playStep()
