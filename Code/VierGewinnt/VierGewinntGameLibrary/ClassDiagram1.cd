@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsolePrinter" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ConsolePrinter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameController" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIACAAABEEAAAIAAAEAAAEEAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>GameController.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Horizontal" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Horizontal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mensch" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABAAAAAAA=</HashCode>
+      <FileName>Mensch.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Regelwerk" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgICAAAAQAAAAACAA=</HashCode>
+      <FileName>Regelwerk.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Schlau">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAA=</HashCode>
+      <FileName>Schlau.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spieler" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Spieler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spielfeld">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAIAAIAAAAAAAAQAAAAAAAAAAAAAIAAAAAIAAEA=</HashCode>
+      <FileName>Spielfeld.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spielsteine" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCAAIABgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Spielsteine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAEEAAEAAAAAAA=</HashCode>
+      <FileName>Team.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vertikal" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Vertikal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zufall" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAAAEAAA=</HashCode>
+      <FileName>Zufall.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

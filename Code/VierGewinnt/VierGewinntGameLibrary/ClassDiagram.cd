@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ConsolePrinter">
-    <Position X="10.25" Y="3" Width="1.5" />
+  <Class Name="ConsolePrinter" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>ConsolePrinter.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Schlau">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Position X="4.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAEEAAAAAAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAA=</HashCode>
       <FileName>Schlau.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Spieler" Collapsed="true">
-    <Position X="7" Y="0.75" Width="1.5" />
+  <Class Name="Spieler">
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAQAAAAAAAAAAIAAAAAAAAEBAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAQAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAFAAAAAAA=</HashCode>
       <FileName>Spieler.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Team">
-    <Position X="8.5" Y="3" Width="1.5" />
+  <Class Name="Team" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAEEAAEAAAAAAA=</HashCode>
       <FileName>Team.h</FileName>
