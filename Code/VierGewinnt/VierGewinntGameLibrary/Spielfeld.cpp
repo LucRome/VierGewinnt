@@ -68,3 +68,12 @@ std::shared_ptr<Spielsteine> Spielfeld::getPosition(int spalte, int zeile) const
 {
     return m_spielfeld[zeile][spalte];
 }
+
+int Spielfeld::getLowestLevel(int spalte)
+{
+    for (int i = (m_size -1); i >=0; i--) { //hier austauschen gegen Zeilenanzahl
+        if (m_spielfeld[i][spalte] == nullptr) {
+            return i;
+        }
+    }
+}

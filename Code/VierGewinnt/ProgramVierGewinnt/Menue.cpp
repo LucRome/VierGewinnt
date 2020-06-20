@@ -20,24 +20,24 @@ void Menue::Spielbeginn()
 	char symbol;
 	std::cout << "Wieviele Spieler spielen?" << std::endl;
 	std::cin >> Spieleranzahl;
-	std::cout << "wieviele Teams soll es geben?" << std::endl;
-	std::cin >> Teamanzahl;
+	/*std::cout << "wieviele Teams soll es geben?" << std::endl;
+	std::cin >> Teamanzahl;*/ //braucht man eigentlich nicht, momentan nicht möglich mehrere Spieler in einem Team zu haben 
 	for (int i = 0; i < Spieleranzahl; i++)
 	{
 		std::cout << "Welche Art Spieler soll Spieler" << i << " sein" << std::endl;
-		std::cout << "1=Mensch; 2=Vertikal Bot; 3=Horizontal Bot; 4=Schlauer Bot; 5=Zufalls Bot" << std::endl;
+		std::cout << "1=Mensch; 2=Vertikal Bot; 3=Horizontal Bot; 4= Zufalls Bot; 5=Schlauer Bot" << std::endl;
 		std::cin >> m_SpielerArt;
-		std::cout << "Symbol: ";
-		std::cin >> symbol;
 
 		switch (m_SpielerArt)
 		{
 		case 1:
 		{
+			std::cout << "Symbol: ";
+			std::cin >> symbol; // muss hier eingelesen werden, weil die Bots haben Standardwerte
 			std::cout << "Wie soll Spieler" << i << " heißen" << std::endl;
 			std::cin >> m_Spielername;
-			std::cout << "Wie soll dein Team heißen?" << std::endl;
-			std::cin >> m_Teamname;
+			/*std::cout << "Wie soll dein Team heißen?" << std::endl;
+			std::cin >> m_Teamname;*/
 			m_Team[i] = std::make_shared<Team>(m_Teamname, symbol);
 			m_Spieler.push_back(std::make_shared<Mensch>(m_Team[i], m_Spielername));
 			break;
@@ -50,7 +50,7 @@ void Menue::Spielbeginn()
 		}
 		case 3:
 		{
-			m_Team[i] = std::make_shared<Team>("Horizontale Kleindenker", '0');
+			m_Team[i] = std::make_shared<Team>("Horizontale Kleindenker", 'o');
 			m_Spieler.push_back(std::make_shared<Horizontal>(m_Team[i]));
 			break;
 		}
