@@ -13,7 +13,7 @@ Regelwerk::~Regelwerk()
 {
 }
 
-std::shared_ptr<Spielsteine> Regelwerk::waagerechtCheck(Spielfeld& spielfeld, std::shared_ptr<Spielsteine> meinStein)
+std::shared_ptr<Spielsteine> Regelwerk::waagerechtCheck(Spielfeld& spielfeld, Team& team)
 {
 	int zähler = 0;	//keine Umlaute!!!
 	int max_zähler = 0;
@@ -21,11 +21,11 @@ std::shared_ptr<Spielsteine> Regelwerk::waagerechtCheck(Spielfeld& spielfeld, st
 	int size = spielfeld.getSize();
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			if ((meinStein->getSymbol()) == (spielfeld.getPosition(j - 1, i))->getSymbol()) {
+			if ((team.getSymbol()) == (spielfeld.getPosition(j - 1, i))->getSymbol()) {
 				zähler++;
-				if ((meinStein->getSymbol()) == (spielfeld.getPosition(j - 2, i))->getSymbol()) {
+				if ((team.getSymbol()) == (spielfeld.getPosition(j - 2, i))->getSymbol()) {
 					zähler++;
-					if ((meinStein->getSymbol()) == (spielfeld.getPosition(j - 3, i))->getSymbol()) {
+					if ((team.getSymbol()) == (spielfeld.getPosition(j - 3, i))->getSymbol()) {
 						zähler++;
 					}
 				}
@@ -34,11 +34,11 @@ std::shared_ptr<Spielsteine> Regelwerk::waagerechtCheck(Spielfeld& spielfeld, st
 				spielfeld.getPosition(j, i)->setZähler(zähler);
 				return spielfeld.getPosition(j, i);
 			}
-			else if ((meinStein->getSymbol()) == (spielfeld.getPosition(j + 1, i))->getSymbol()) {
+			else if ((team.getSymbol()) == (spielfeld.getPosition(j + 1, i))->getSymbol()) {
 				zähler++;
-				if ((meinStein->getSymbol()) == (spielfeld.getPosition(j + 2, i))->getSymbol()) {
+				if ((team.getSymbol()) == (spielfeld.getPosition(j + 2, i))->getSymbol()) {
 					zähler++;
-					if ((meinStein->getSymbol()) == (spielfeld.getPosition(j + 3, i))->getSymbol()) {
+					if ((team.getSymbol()) == (spielfeld.getPosition(j + 3, i))->getSymbol()) {
 						zähler++;
 					}
 				}
