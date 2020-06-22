@@ -14,4 +14,5 @@ public:
 	static std::shared_ptr<Spielsteine> waagerechtCheck(Spielfeld& spielfeld, Team& team); //meinStein -> Beispielstein für den Verwendeten?
 	static std::shared_ptr<Spielsteine> senkrechtCheck(Spielfeld& spielfeld, std::shared_ptr<Spielsteine> meinStein);  //Eher über Übergabe des Teams?
 	static std::shared_ptr<Spielsteine> diagonalCheck(Spielfeld& spielfeld, std::shared_ptr<Spielsteine> meinStein);
+	bool ImSpielfeld(int Umgebung1, int Umgebung2);
 };
