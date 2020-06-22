@@ -17,6 +17,7 @@ Menue::~Menue()
 
 void Menue::Spielbeginn()
 {
+	std::shared_ptr<Spieler> gewinner;
 	char symbol;
 	std::cout << "Wieviele Spieler spielen?" << std::endl;
 	std::cin >> Spieleranzahl;
@@ -75,7 +76,7 @@ void Menue::Spielbeginn()
 		
 	}
 	GameController gameController = GameController(m_Spieler);
-	gameController.playGame();
+	gewinner = gameController.playGame();
 }
 
 void Menue::Teamausgeben(std::shared_ptr<Team> Team)
