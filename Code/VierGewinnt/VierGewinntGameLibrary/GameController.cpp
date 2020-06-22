@@ -16,7 +16,7 @@ GameController::~GameController()
 
 void GameController::playGame() //Erstmal: spielen bis Feld voll
 {
-	while (!m_spielfeld.isVoll()) {
+	while ((!m_spielfeld.isVoll()) && (!m_Regelwerk.gewonnen(m_spielfeld, *m_spielerDran->getTeam()))) {
 		playStep();
 	}
 	ConsolePrinter::printField(m_spielfeld);

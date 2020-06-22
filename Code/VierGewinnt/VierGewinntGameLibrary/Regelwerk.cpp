@@ -183,143 +183,162 @@ Regelwerk::~Regelwerk()
 //}
 
 
-std::shared_ptr<Spielsteine> Regelwerk::waagerechtCheck(Spielfeld& spielfeld, Team& team)
+bool Regelwerk::gewonnen(Spielfeld& m_spielfeld, Team& team)
+{
+	bool gewinnen = false;
+	if (waagerechtCheck(m_spielfeld, team) != 0)
+	{
+		return !gewinnen;
+	}
+	if (senkrechtCheck(m_spielfeld, team) != 0)
+	{
+		return !gewinnen;
+	}
+	if (diagonalCheck(m_spielfeld, team) != 0)
+	{
+		return !gewinnen;
+	}
+	return gewinnen;
+}
+
+bool Regelwerk::waagerechtCheck(Spielfeld& m_spielfeld, Team& team)
 {
 	int zähler = 0;	//keine Umlaute!!!
 	int max_zähler = 0;
 	std::shared_ptr<Spielsteine> jetztDa;
-	int size = m_Spielfeld.getSize();
+	int size = m_spielfeld.getSize();
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			if (Umgebung(i, j, 1, 0).m_counter == 3)
+			if (Umgebung(i, j, 1, 0,m_spielfeld, team)==true)
 			{
-				jetztDa = Umgebung(i, j, 1, 0, team);
-				return jetztDa;
+				return true;
 			}
 		}
 	}
-	return 0;
+	return false;
 }
 
-std::shared_ptr<Spielsteine> Regelwerk::senkrechtCheck(Spielfeld& spielfeld, Team& team)
+bool Regelwerk::senkrechtCheck(Spielfeld& m_spielfeld, Team& team)
 {
 	int zähler = 0;
 	int max_zähler = 0;
-	int size = m_Spielfeld.getSize();
+	int size = m_spielfeld.getSize();
+	std::shared_ptr<Spielsteine> jetztDa;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			if (Umgebung(i, j, 0, +1).m_counter == 3)
+			if (Umgebung(i, j, 0, +1,m_spielfeld,team)==true)
 			{
-				jetztDa = Umgebung(i, j, 0, 1, team);
-				return jetztDa;
+				return true;
 			}
 		}
 	}
-	return 0;
+	return false;
 }
 
-std::shared_ptr<Spielsteine> Regelwerk::diagonalCheck(Spielfeld& spielfeld, Team& team)
+bool Regelwerk::diagonalCheck(Spielfeld& m_spielfeld, Team& team)
 {
 	int zähler = 0;
 	int max_zähler = 0;
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if (Umgebung(i, j, +1, +1).m_counter == 3)
+	std::shared_ptr<Spielsteine> jetztDa;
+	for (int i = 0; i < m_spielfeld.getSize(); i++) {
+		for (int j = 0; j < m_spielfeld.getSize(); j++) {
+			if (Umgebung(i, j, +1, +1, m_spielfeld, team)==true)
 			{
-				jetztDa = Umgebung(i, j, -1, 1, team);
-				return jetztDa;
+				return true;
 			}
 		}
 	}
 
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if (Umgebung(i, j, -1, -1).m_counter == 3)
+	for (int i = 0; i <m_spielfeld.getSize(); i++) {
+		for (int j = 0; j < m_spielfeld.getSize(); j++) {
+			if (Umgebung(i, j, -1, -1, m_spielfeld, team)==true)
 			{
-				jetztDa = Umgebung(i, j, -1, -1, team);
-				return jetztDa;
+				return true;
 			}
 		}
 	}
 
-	return 0;
+	return false;
 }
 
 
-int Umgebung(x, y, zähler1, zähler2, Spielfeld& spielfeld, Team& team)
+bool Regelwerk:: Umgebung(int x, int y,int zähler1,int zähler2, Spielfeld& m_spielfeld, Team& team)
 {
-	int Zähler;
+	std::shared_ptr<Spielsteine> jetztDa;
+	int Zähler=0;
 	int j = x;
 	int i = y;
 	int Umgebung1 = zähler1;
 	int Umgebung2 = zähler2;
-	if (ImSpielfeld(Umgebung1, Umgebung2))
+	int max_zähler=0;
+	if (ImSpielfeld(i, j, Umgebung1, Umgebung2, m_spielfeld))
 	{
-		if ((team->getSymbol()) == (m_Spielfeld.getPosition(j + Umgebung1, i + Umgebung2))->getSymbol()) {
+		if ((team.getSymbol()) == (m_spielfeld.getPosition(j + Umgebung1, i + Umgebung2)->getSymbol())) 
+		{
 			Umgebung1 += Umgebung1;
 			Umgebung2 += Umgebung2;
-			zähler++;
-			if (ImSpielfeld(Umgebung1, Umgebung2))
+			Zähler++;
+			if (ImSpielfeld(i,j,Umgebung1, Umgebung2, m_spielfeld))
 			{
-				if ((team->getSymbol()) == (m_Spielfeld.getPosition(j + Umgebung1, i + Umgebung2))->getSymbol()) {
+				if ((team.getSymbol()) == (m_spielfeld.getPosition(j + Umgebung1, i + Umgebung2))->getSymbol()) {
 					Umgebung1 += Umgebung1;
 					Umgebung2 += Umgebung2;
-					zähler++;
-					if (ImSpielfeld(Umgebung1, Umgebung2))
+					Zähler++;
+					if (ImSpielfeld(i,j,Umgebung1, Umgebung2, m_spielfeld))
 					{
-						if ((team->getSymbol()) == (m_Spielfeld.getPosition(j + Umgebung1, i + Umgebung2))->getSymbol()) {
+						if ((team.getSymbol()) == (m_spielfeld.getPosition(j + Umgebung1, i + Umgebung2))->getSymbol()) {
 							Umgebung1 += Umgebung1;
 							Umgebung2 += Umgebung2;
-							zähler++;
+							Zähler++;
 						}
 					}
 				}
 			}
 		}
 	}
-	if (zähler == 3) {
-		m_Spielfeld.getPosition(j, i)->setZähler(zähler);
-		return m_Spielfeld.getPosition(j, i);
+	if (Zähler == 3) {
+		m_spielfeld.getPosition(j, i)->setZähler(Zähler);
+		return true;
 	}
-	else if (ImSpielfeld(Umgebung1, Umgebung2))
+	else if (ImSpielfeld(i,j,Umgebung1, Umgebung2, m_spielfeld))
 	{
-		if ((team->getSymbol()) == (m_Spielfeld.getPosition(j - Umgebung1, i - Umgebung2))->getSymbol()) {
+		if ((team.getSymbol()) == (m_spielfeld.getPosition(j - Umgebung1, i - Umgebung2))->getSymbol()) {
 			Umgebung1 += Umgebung1;
 			Umgebung2 += Umgebung2;
-			zähler++;
-			if (ImSpielfeld(Umgebung1, Umgebung2))
+			Zähler++;
+			if (ImSpielfeld(i,j,Umgebung1, Umgebung2, m_spielfeld))
 			{
-				if ((team->getSymbol()) == (m_Spielfeld.getPosition(j - Umgebung1, i - Umgebung2))->getSymbol()) {
+				if ((team.getSymbol()) == (m_spielfeld.getPosition(j - Umgebung1, i - Umgebung2))->getSymbol()) {
 					Umgebung1 += Umgebung1;
 					Umgebung2 += Umgebung2;
-					zähler++;
-					if (ImSpielfeld(Umgebung1, Umgebung2))
+					Zähler++;
+					if (ImSpielfeld(i,j,Umgebung1, Umgebung2, m_spielfeld))
 					{
-						if ((team->getSymbol()) == (m_Spielfeld.getPosition(j - Umgebung1, i - Umgebung2))->getSymbol()) {
+						if ((team.getSymbol()) == (m_spielfeld.getPosition(j - Umgebung1, i - Umgebung2))->getSymbol()) {
 							Umgebung1 += Umgebung1;
 							Umgebung2 += Umgebung2;
-							zähler++;
+							Zähler++;
 						}
 					}
 				}
 			}
 		}
 	}
-	if (zähler == 3) {
-		m_Spielfeld.getPosition(j, i)->setZähler(zähler);
-		return m_Spielfeld.getPosition(j, i);
+	if (Zähler == 3) {
+		m_spielfeld.getPosition(j, i)->setZähler(Zähler);
+		return true;
 	}
-	else if (max_zähler < zähler) {
-		m_Spielfeld.getPosition(j, i)->setZähler(zähler);
-		max_zähler = zähler;
-		jetztDa = m_Spielfeld.getPosition(j, i);
-		return 0;
+	else if (max_zähler < Zähler) {
+		m_spielfeld.getPosition(j, i)->setZähler(Zähler);
+		max_zähler = Zähler;
+		jetztDa = m_spielfeld.getPosition(j, i);
+		return false;
 	}
 }
 
-bool ImSpielfeld(int Umgebung1, int Umgebung2)
+bool Regelwerk::ImSpielfeld(int i, int j, int Umgebung1, int Umgebung2, Spielfeld& m_spielfeld)
 {
-	if (Spielfeld.weight + (i + Umgebung1) >= 0 && Spielfeld.weight > (i + Umgebung1) && Spielfeld.high+(j+Umgebung2)>=0 && Spielfeld.high>(j+Umgebung))           
+	if (m_spielfeld.getSize() + (i + Umgebung1) >= 0 && m_spielfeld.getSize() > (i + Umgebung1) && m_spielfeld.getSize()+(j+Umgebung2)>=0 && m_spielfeld.getSize()>(j+Umgebung2))           
 	{
 		return true;
 	}

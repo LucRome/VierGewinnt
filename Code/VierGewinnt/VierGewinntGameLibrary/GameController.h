@@ -2,6 +2,7 @@
 #include <memory>
 #include <vector>
 #include "ConsolePrinter.h"
+#include "Regelwerk.h"
 //#include "pch.h"
 
 class Team;
@@ -25,4 +26,5 @@ protected:
 	int m_teamDran;
 	Spielfeld m_spielfeld;
 	std::shared_ptr<Spieler> m_spielerDran;
+	Regelwerk m_Regelwerk;
 };
