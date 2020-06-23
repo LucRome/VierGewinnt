@@ -37,22 +37,26 @@ int Spielfeld::getSize() const
 }
 
 
-setStoneMsg Spielfeld::placeStone(Team& team, int spalte)
+CoordAndSuccess Spielfeld::placeStone(Team& team, int spalte)
 {
-    setStoneMsg msg = possiblePlacement(spalte);
-    if (msg == setStoneMsg::success) {    //wenn = nullptr; angenommen: 0 =: oben
+    CoordAndSuccess msg;
+    msg.success = possiblePlacement(spalte);
+    if (msg.success == setStoneMsg::success) {    //wenn = nullptr; angenommen: 0 =: oben
         int zeile = m_size - 1;
         while (m_spielfeld[zeile][spalte]) {    //"Von unten nach oben"
             zeile--;
         }
         m_spielfeld[zeile][spalte] = std::make_shared<Spielsteine>(team);
+        msg.spalte = spalte;
+        msg.zeile = zeile;
     }
     return msg;
 }
 
 setStoneMsg Spielfeld::possiblePlacement(int spalte)
 {
-    setStoneMsg msg = setStoneMsg::success;
+    setStoneMsg msg;
+    msg = setStoneMsg::success;
     if (spalte < m_size) {
         if (m_spielfeld[0][spalte]) {
             msg = setStoneMsg::rowFull;

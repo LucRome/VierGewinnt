@@ -15,13 +15,15 @@ public:
 	~GameController();
 
 	void playGame();
-	void playStep();
+	bool playStep();
 protected:
 	void spielerwechsel();
 	
 	
 	std::vector<std::shared_ptr<Team>> m_teams;
 	std::vector<std::shared_ptr<Spieler>> m_spieler;
+
+	CoordAndSuccess m_coordAndSuccess;
 
 	int m_teamDran;
 	Spielfeld m_spielfeld;

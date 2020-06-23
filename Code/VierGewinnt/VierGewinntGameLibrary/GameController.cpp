@@ -16,22 +16,29 @@ GameController::~GameController()
 
 void GameController::playGame() //Erstmal: spielen bis Feld voll
 {
-	while ((!m_spielfeld.isVoll()) && (!m_Regelwerk.gewonnen(m_spielfeld, *m_spielerDran->getTeam()))) {
-		playStep();
-	}
+	bool win;
+	do {
+		win = playStep();
+	} while (!m_spielfeld.isVoll() && !win);
 	ConsolePrinter::printField(m_spielfeld);
 	ConsolePrinter::printMessage("Feld voll");
 }
 
-void GameController::playStep()
+bool GameController::playStep()
 {
+	bool win;
 	int spalte = 0;
 	ConsolePrinter::printField(m_spielfeld);
 	ConsolePrinter::printMessage("Spieler: ");
 	ConsolePrinter::printMessage(m_spielerDran->getName());
 	spalte = m_spielerDran->chooseRow(m_spielfeld);
-	m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
+	m_coordAndSuccess = m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
+	win = Regelwerk::gewonnen(m_coordAndSuccess.zeile, m_coordAndSuccess.spalte, m_spielfeld, *m_spielerDran->getTeam());
+	if (win == true) {
+		return win;
+	}
 	spielerwechsel();
+	return win;
 }
 
 void GameController::spielerwechsel()
