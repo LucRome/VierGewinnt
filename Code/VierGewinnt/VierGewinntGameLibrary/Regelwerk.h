@@ -11,8 +11,18 @@ public:
 	Regelwerk();
 	~Regelwerk();
 	/*vielleicht alle als static?*/
-	static std::shared_ptr<Spielsteine> waagerechtCheck(Spielfeld& spielfeld, Team& team); //meinStein -> Beispielstein für den Verwendeten?
-	static std::shared_ptr<Spielsteine> senkrechtCheck(Spielfeld& spielfeld, std::shared_ptr<Spielsteine> meinStein);  //Eher über Übergabe des Teams?
-	static std::shared_ptr<Spielsteine> diagonalCheck(Spielfeld& spielfeld, std::shared_ptr<Spielsteine> meinStein);
-	bool ImSpielfeld(int Umgebung1, int Umgebung2);
+	static bool gewonnen(Spielfeld& m_spielfeld, Team& team);
+	static bool gewonnen(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
+
+private:
+	static bool waagerechtCheck(Spielfeld& m_spielfeld, Team& team); //meinStein -> Beispielstein für den Verwendeten?
+	static bool senkrechtCheck(Spielfeld& m_spielfeld, Team& team);  //Eher über Übergabe des Teams?
+	static bool diagonalCheck(Spielfeld& m_spielfeld, Team& team);
+
+	static bool waagerechtCheck(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
+	static bool senkrechtCheck(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
+	static bool diagonalCheck(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
+
+	static bool Umgebung(int x, int y, int zähler1, int zähler2, Spielfeld& m_spielfeld, Team& team);
+	static bool ImSpielfeld(int zeile, int spalte, Spielfeld& m_spielfeld);
 };
