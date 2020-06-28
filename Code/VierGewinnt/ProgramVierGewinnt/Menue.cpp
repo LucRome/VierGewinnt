@@ -76,7 +76,7 @@ void Menue::Spielbeginn()
 		
 	}
 	GameController gameController = GameController(m_Spieler);
-	gewinner = gameController.playGame();
+	gameController.playGame();
 }
 
 void Menue::Teamausgeben(std::shared_ptr<Team> Team)

@@ -1,7 +1,8 @@
 #pragma once
 #include <memory>
 #include "Team.h"
-//#include "pch.h"
+#include "CoordAndSuccess.h"
+
 class Spielfeld;
 class Spielsteine;
 
@@ -12,17 +13,20 @@ public:
 	~Regelwerk();
 	/*vielleicht alle als static?*/
 	static bool gewonnen(Spielfeld& m_spielfeld, Team& team);
-	static bool gewonnen(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
+	static bool gewonnen(Coord coordinates, Spielfeld& m_spielfeld, Team& team);
 
 private:
 	static bool waagerechtCheck(Spielfeld& m_spielfeld, Team& team); //meinStein -> Beispielstein für den Verwendeten?
 	static bool senkrechtCheck(Spielfeld& m_spielfeld, Team& team);  //Eher über Übergabe des Teams?
 	static bool diagonalCheck(Spielfeld& m_spielfeld, Team& team);
 
-	static bool waagerechtCheck(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
-	static bool senkrechtCheck(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
-	static bool diagonalCheck(int zeile, int spalte, Spielfeld& m_spielfeld, Team& team);
+	static bool waagerechtCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& team);
+	static bool senkrechtCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& team);
+	static bool diagonalCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& team);
 
-	static bool Umgebung(int x, int y, int zähler1, int zähler2, Spielfeld& m_spielfeld, Team& team);
-	static bool ImSpielfeld(int zeile, int spalte, Spielfeld& m_spielfeld);
+	static bool Umgebung(Coord coordinates, Coord deltas, Spielfeld& m_spielfeld, Team& team);
+	static bool ImSpielfeld(Coord coordinates, Spielfeld& m_spielfeld);
+
+private:
+	static const Coord d_waagerecht, d_senkrecht, d_diagonal1, d_diagonal2;
 };

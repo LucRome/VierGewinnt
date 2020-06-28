@@ -33,7 +33,7 @@ bool GameController::playStep()
 	ConsolePrinter::printMessage(m_spielerDran->getName());
 	spalte = m_spielerDran->chooseRow(m_spielfeld);
 	m_coordAndSuccess = m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
-	win = Regelwerk::gewonnen(m_coordAndSuccess.zeile, m_coordAndSuccess.spalte, m_spielfeld, *m_spielerDran->getTeam());
+	win = Regelwerk::gewonnen(m_coordAndSuccess.coordinates, m_spielfeld, *m_spielerDran->getTeam());
 	if (win == true) {
 		return win;
 	}

@@ -5,17 +5,17 @@
 void ConsolePrinter::printField(Spielfeld& spielfeld)
 {
 	std::shared_ptr<Spielsteine> spielstein;
-	int size = spielfeld.getSize();
+	Coord size = spielfeld.getSize();
 	std::cout << " ";
-	for (int i = 0; i < size; i++) {
-		std::cout <<" "<< i;
+	for (int spalteNr = 0; spalteNr < size.spalte; spalteNr++) {
+		std::cout <<" "<< spalteNr;
 	}
 	std::cout << std::endl;
-	for (int i = 0; i < size; i++) {
-		std::cout << i;
+	for (int zeileNr = 0; zeileNr < size.zeile; zeileNr++) {
+		std::cout << zeileNr;
 		std::cout << "|";
-		for (int j = 0; j < size; j++) {
-			if (spielstein = spielfeld.getPosition(j, i)) {
+		for (int spalteNr = 0; spalteNr < size.spalte; spalteNr++) {
+			if (spielstein = spielfeld.getPosition({ zeileNr, spalteNr })) {
 				std::cout << spielstein->getSymbol();
 			}
 			else {

@@ -23,9 +23,10 @@ int Zufall::chooseRow(Spielfeld& spielfeld)
 {
 	int spalte=2;
 	setStoneMsg msg;
+	Coord size = spielfeld.getSize();
 	do {
-		int a=0, b= (spielfeld.getSize() - 1); //hier dann später ändern auf getSpalte!!!
-		spalte = a + rand() % (b - a + 1);
+		int min = 0, max = (size.spalte - 1); //hier dann später ändern auf getSpalte!!!
+		spalte = min + rand() % (max - min + 1);
 		msg = spielfeld.possiblePlacement(spalte); 
 	} while (msg != setStoneMsg::success);
 

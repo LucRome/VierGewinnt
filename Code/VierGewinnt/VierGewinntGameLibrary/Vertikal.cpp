@@ -16,8 +16,9 @@ int Vertikal::chooseRow(Spielfeld& spielfeld)
 {
 	int spalte = 0;
 	setStoneMsg msg;
-	for (int i = 0; i < spielfeld.getSize(); i++) { // getSize auf getSpalte() ändern
-		spalte = i;
+	Coord size = spielfeld.getSize();
+	for (int zeile = 0; zeile < size.zeile; zeile++) { // getSize auf getSpalte() ändern
+		spalte = zeile;
 		msg = spielfeld.possiblePlacement(spalte);
 		if (msg == setStoneMsg::success) {
 			return spalte;

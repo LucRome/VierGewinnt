@@ -28,5 +28,4 @@ protected:
 	int m_teamDran;
 	Spielfeld m_spielfeld;
 	std::shared_ptr<Spieler> m_spielerDran;
-	Regelwerk m_Regelwerk;
 };
