@@ -1,4 +1,7 @@
 //#include "pch.h"
+#include <iostream>
+#include <memory>
+#include <string.h>
 #include "Regelwerk.h"
 #include "Spielfeld.h"
 #include "Spielsteine.h"
@@ -225,6 +228,7 @@ bool Regelwerk::waagerechtCheck(Spielfeld& m_spielfeld, Team& team)
 		for (int j = 0; j < size; j++) {
 			if (Umgebung(i, j, 1, 0,m_spielfeld, team)==true)
 			{
+				std::cout << "Team"<< team.getName()  <<"hat gewonnen" << std::endl;
 				return true;
 			}
 		}
@@ -242,6 +246,7 @@ bool Regelwerk::senkrechtCheck(Spielfeld& m_spielfeld, Team& team)
 		for (int j = 0; j < size; j++) {
 			if (Umgebung(i, j, 0, 1,m_spielfeld,team)==true)
 			{
+				std::cout << "Team" << team.getName() << "hat gewonnen" << std::endl;
 				return true;
 			}
 		}
@@ -258,6 +263,7 @@ bool Regelwerk::diagonalCheck(Spielfeld& m_spielfeld, Team& team)
 		for (int j = 0; j < m_spielfeld.getSize(); j++) {
 			if (Umgebung(i, j, +1, +1, m_spielfeld, team)==true)
 			{
+				std::cout << "Team" << team.getName() << "hat gewonnen" << std::endl;
 				return true;
 			}
 		}
@@ -267,6 +273,7 @@ bool Regelwerk::diagonalCheck(Spielfeld& m_spielfeld, Team& team)
 		for (int j = 0; j < m_spielfeld.getSize(); j++) {
 			if (Umgebung(i, j, -1, -1, m_spielfeld, team)==true)
 			{
+				std::cout << "Team" << team.getName() << "hat gewonnen" << std::endl;
 				return true;
 			}
 		}
