@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary;C:\Users\Admin\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary;C:\Users\Felix\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary;C:\Users\Admin\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
