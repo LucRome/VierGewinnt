@@ -9,4 +9,3 @@ public:
     ~Schlau() override;
     int chooseRow(const Spielfeld& spielfeld) const override;
 };
-
