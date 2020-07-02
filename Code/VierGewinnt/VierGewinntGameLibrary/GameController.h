@@ -11,7 +11,7 @@ class Spieler;
 class GameController
 {
 public:
-	GameController(const std::vector<const std::shared_ptr<const Spieler>> spieler);
+	GameController(std::vector<std::shared_ptr<Spieler>> spieler);
 	~GameController();
 
 	void playGame();
@@ -20,12 +20,13 @@ protected:
 	void spielerwechsel();
 	
 	
-	const std::vector<const std::shared_ptr<const Team>> m_teams;
-	const std::vector<const std::shared_ptr<const Spieler>> m_spieler;
+	std::vector<std::shared_ptr<Team>> m_teams;
+	std::vector<std::shared_ptr<Spieler>> m_spieler;
 
 	CoordAndSuccess m_coordAndSuccess;
 
 	int m_teamDran;
 	Spielfeld m_spielfeld;
+	const Spielfeld& constFeld = m_spielfeld;
 	std::shared_ptr<Spieler> m_spielerDran;
 };
