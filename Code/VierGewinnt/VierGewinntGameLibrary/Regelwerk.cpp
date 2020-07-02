@@ -18,7 +18,7 @@ Regelwerk::~Regelwerk()
 }
 
 
-bool Regelwerk::gewonnen(Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::gewonnen(const Spielfeld& m_spielfeld, const Team& team)
 {
 	bool gewinnen = false;
 	if (waagerechtCheck(m_spielfeld, team) != 0)
@@ -36,7 +36,7 @@ bool Regelwerk::gewonnen(Spielfeld& m_spielfeld, Team& team)
 	return gewinnen;
 }
 
-bool Regelwerk::gewonnen(Coord coordinates, Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::gewonnen(const Coord coordinates, const Spielfeld& m_spielfeld, const Team& team)
 {
 	if (waagerechtCheck(coordinates, m_spielfeld, team)) {
 		return true;
@@ -50,7 +50,7 @@ bool Regelwerk::gewonnen(Coord coordinates, Spielfeld& m_spielfeld, Team& team)
 	return false;
 }
 
-bool Regelwerk::waagerechtCheck(Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::waagerechtCheck(const Spielfeld& m_spielfeld, const Team& team)
 {
 	int zähler = 0;	//keine Umlaute!!!
 	int max_zähler = 0;
@@ -67,7 +67,7 @@ bool Regelwerk::waagerechtCheck(Spielfeld& m_spielfeld, Team& team)
 	return false;
 }
 
-bool Regelwerk::senkrechtCheck(Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::senkrechtCheck(const Spielfeld& m_spielfeld, const Team& team)
 {
 	int zähler = 0;
 	int max_zähler = 0;
@@ -84,7 +84,7 @@ bool Regelwerk::senkrechtCheck(Spielfeld& m_spielfeld, Team& team)
 	return false;
 }
 
-bool Regelwerk::diagonalCheck(Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::diagonalCheck(const Spielfeld& m_spielfeld, const Team& team)
 {
 	int zähler = 0;
 	int max_zähler = 0;
@@ -111,7 +111,7 @@ bool Regelwerk::diagonalCheck(Spielfeld& m_spielfeld, Team& team)
 	return false;
 }
 
-bool Regelwerk::waagerechtCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::waagerechtCheck(const Coord coordinates, const Spielfeld& m_spielfeld, const Team& team)
 {
 	if (Umgebung(coordinates, d_waagerecht, m_spielfeld, team)) {
 		return true;
@@ -121,7 +121,7 @@ bool Regelwerk::waagerechtCheck(Coord coordinates, Spielfeld& m_spielfeld, Team&
 	}
 }
 
-bool Regelwerk::senkrechtCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::senkrechtCheck(const Coord coordinates, const Spielfeld& m_spielfeld, const Team& team)
 {
 	if (Umgebung(coordinates, d_senkrecht, m_spielfeld, team)) {
 		return true;
@@ -131,7 +131,7 @@ bool Regelwerk::senkrechtCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& 
 	}
 }
 
-bool Regelwerk::diagonalCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk::diagonalCheck(const Coord coordinates, const Spielfeld& m_spielfeld, const Team& team)
 {
 	if (Umgebung(coordinates, d_diagonal1, m_spielfeld, team) || Umgebung(coordinates, d_diagonal2, m_spielfeld, team)) {
 		return true;
@@ -142,28 +142,28 @@ bool Regelwerk::diagonalCheck(Coord coordinates, Spielfeld& m_spielfeld, Team& t
 }
 
 
-bool Regelwerk:: Umgebung(Coord coordinates, Coord deltas, Spielfeld& m_spielfeld, Team& team)
+bool Regelwerk:: Umgebung(const Coord coordinates, const Coord deltas, const Spielfeld& m_spielfeld, const Team& team)
 {
 	std::shared_ptr<Spielsteine> jetztDa;
-	const Coord save = coordinates;
+	Coord moveCoordinates = coordinates;
 	int counter=0;
 	int max_counter=0;
-	coordinates += deltas;
-	if (ImSpielfeld(coordinates, m_spielfeld) && (m_spielfeld.getPosition(coordinates)))
+	moveCoordinates += deltas;
+	if (ImSpielfeld(moveCoordinates, m_spielfeld) && (m_spielfeld.getPosition(moveCoordinates)))
 		//immer prüfen ob Zielfeld noch im Spielfeld und ob Ziehlfeld != nullptr
 	{
-		if ((team.getSymbol()) == (m_spielfeld.getPosition(coordinates)->getSymbol()))
+		if ((team.getSymbol()) == (m_spielfeld.getPosition(moveCoordinates)->getSymbol()))
 		{
-			coordinates += deltas;
+			moveCoordinates += deltas;
 			counter++;
-			if (ImSpielfeld(coordinates, m_spielfeld) && (m_spielfeld.getPosition(coordinates)))
+			if (ImSpielfeld(moveCoordinates, m_spielfeld) && (m_spielfeld.getPosition(moveCoordinates)))
 			{
-				if ((team.getSymbol()) == (m_spielfeld.getPosition(coordinates))->getSymbol()) {
-					coordinates += deltas;
+				if ((team.getSymbol()) == (m_spielfeld.getPosition(moveCoordinates))->getSymbol()) {
+					moveCoordinates += deltas;
 					counter++;
-					if (ImSpielfeld(coordinates, m_spielfeld) && (m_spielfeld.getPosition(coordinates)))
+					if (ImSpielfeld(moveCoordinates, m_spielfeld) && (m_spielfeld.getPosition(moveCoordinates)))
 					{
-						if ((team.getSymbol()) == (m_spielfeld.getPosition(coordinates))->getSymbol()) {
+						if ((team.getSymbol()) == (m_spielfeld.getPosition(moveCoordinates))->getSymbol()) {
 							/*Umgebung1 += zähler1;
 							Umgebung2 += zähler2;*/
 							counter++;
@@ -173,24 +173,24 @@ bool Regelwerk:: Umgebung(Coord coordinates, Coord deltas, Spielfeld& m_spielfel
 			}
 		}
 	}
-	coordinates = save;
+	moveCoordinates = coordinates;
 	if (counter == 3) {
-		m_spielfeld.getPosition(coordinates)->setZähler(counter);
+		m_spielfeld.getPosition(moveCoordinates)->setZähler(counter);
 		return true;
 	}
-	else if (ImSpielfeld(coordinates -= deltas, m_spielfeld) && (m_spielfeld.getPosition(coordinates)))
+	else if (ImSpielfeld(moveCoordinates -= deltas, m_spielfeld) && (m_spielfeld.getPosition(moveCoordinates)))
 	{
-		if ((team.getSymbol()) == (m_spielfeld.getPosition(coordinates))->getSymbol()) {
-			coordinates -= deltas;
+		if ((team.getSymbol()) == (m_spielfeld.getPosition(moveCoordinates))->getSymbol()) {
+			moveCoordinates -= deltas;
 			counter++;
-			if (ImSpielfeld(coordinates, m_spielfeld) && (m_spielfeld.getPosition(coordinates)))
+			if (ImSpielfeld(moveCoordinates, m_spielfeld) && (m_spielfeld.getPosition(moveCoordinates)))
 			{
-				if ((team.getSymbol()) == (m_spielfeld.getPosition(coordinates))->getSymbol()) {
-					coordinates -= deltas;
+				if ((team.getSymbol()) == (m_spielfeld.getPosition(moveCoordinates))->getSymbol()) {
+					moveCoordinates -= deltas;
 					counter++;
-					if (ImSpielfeld(coordinates, m_spielfeld) && (m_spielfeld.getPosition(coordinates)))
+					if (ImSpielfeld(moveCoordinates, m_spielfeld) && (m_spielfeld.getPosition(moveCoordinates)))
 					{
-						if ((team.getSymbol()) == (m_spielfeld.getPosition(coordinates))->getSymbol()) {
+						if ((team.getSymbol()) == (m_spielfeld.getPosition(moveCoordinates))->getSymbol()) {
 							/*coordinates -= deltas;*/
 							counter++;
 						}
@@ -199,21 +199,21 @@ bool Regelwerk:: Umgebung(Coord coordinates, Coord deltas, Spielfeld& m_spielfel
 			}
 		}
 	}
-	coordinates = save;
+	moveCoordinates = coordinates;
 	if (counter == 3) {
-		m_spielfeld.getPosition(coordinates)->setZähler(counter);
+		m_spielfeld.getPosition(moveCoordinates)->setZähler(counter);
 		return true;
 	}
 	else if (max_counter < counter) {
-		m_spielfeld.getPosition(coordinates)->setZähler(counter);
+		m_spielfeld.getPosition(moveCoordinates)->setZähler(counter);
 		max_counter = counter;
-		jetztDa = m_spielfeld.getPosition(coordinates);
+		jetztDa = m_spielfeld.getPosition(moveCoordinates);
 		return false;
 	}
 	return false;
 }
 
-bool Regelwerk::ImSpielfeld(Coord coordinates, Spielfeld& m_spielfeld)
+bool Regelwerk::ImSpielfeld(const Coord coordinates, const Spielfeld& m_spielfeld)
 {
 	Coord size = m_spielfeld.getSize();
 	if (coordinates.zeile < size.zeile && coordinates.zeile >= 0 && coordinates.spalte < size.spalte && coordinates.spalte >= 0){

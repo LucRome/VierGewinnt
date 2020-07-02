@@ -28,7 +28,7 @@ Coord Spielfeld::getSize() const
 }
 
 
-CoordAndSuccess Spielfeld::placeStone(Team& team, int spalte)
+CoordAndSuccess Spielfeld::placeStone(const Team& team, const int spalte)
 {
     CoordAndSuccess msg;
     msg.success = possiblePlacement(spalte);
@@ -44,7 +44,7 @@ CoordAndSuccess Spielfeld::placeStone(Team& team, int spalte)
     return msg;
 }
 
-setStoneMsg Spielfeld::possiblePlacement(int spalte)
+setStoneMsg Spielfeld::possiblePlacement(const int spalte) const
 {
     setStoneMsg msg;
     msg = setStoneMsg::success;
@@ -59,12 +59,12 @@ setStoneMsg Spielfeld::possiblePlacement(int spalte)
     return msg;
 }
 
-std::shared_ptr<Spielsteine> Spielfeld::getPosition(Coord coordinates) const
+std::shared_ptr<Spielsteine> Spielfeld::getPosition(const Coord coordinates) const
 {
     return m_spielfeld[coordinates.zeile][coordinates.spalte];
 }
 
-int Spielfeld::getLowestLevel(int spalte)
+int Spielfeld::getLowestLevel(const int spalte) const
 {
     for (int i = (m_size.zeile - 1); i >=0; i--) { //hier austauschen gegen Zeilenanzahl
         if (!getPosition({ i, spalte })) {

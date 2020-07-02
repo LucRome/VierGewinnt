@@ -7,8 +7,8 @@ class Mensch :
     public Spieler
 {
 public:
-    Mensch(std::shared_ptr<Team> team, std::string name);
+    Mensch(const std::shared_ptr<const Team> team, const std::string name);
     ~Mensch() override;
-    int chooseRow(Spielfeld& spielfeld) override;
+    int chooseRow(const Spielfeld& spielfeld) const override;
 };
 

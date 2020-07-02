@@ -2,7 +2,7 @@
 #include "ConsolePrinter.h"
 
 
-void ConsolePrinter::printField(Spielfeld& spielfeld)
+void ConsolePrinter::printField(const Spielfeld& spielfeld)
 {
 	std::shared_ptr<Spielsteine> spielstein;
 	Coord size = spielfeld.getSize();
@@ -27,7 +27,7 @@ void ConsolePrinter::printField(Spielfeld& spielfeld)
 	}
 }
 
-void ConsolePrinter::printMessage(std::string message)
+void ConsolePrinter::printMessage(const std::string message)
 {
 	std::cout << message << std::endl;
 }

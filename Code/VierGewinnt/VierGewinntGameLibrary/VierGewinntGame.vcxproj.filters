@@ -13,99 +13,120 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\Spieler">
+      <UniqueIdentifier>{792a2c43-e5ec-46a5-8c7e-c0b906286dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Hilfsdateien und Klassen">
+      <UniqueIdentifier>{81e30cff-a992-48ee-8b98-6c406338b44e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\staticLib">
+      <UniqueIdentifier>{54b50bba-63a2-465c-9511-5ffd358cca84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\other">
+      <UniqueIdentifier>{556e65d5-a5bd-4bdb-b8fc-a82f8528e738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Spieler">
+      <UniqueIdentifier>{a5f1cb8c-9208-48b7-baa0-ac4a1901ab9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Hilfsdateien und Klassen">
+      <UniqueIdentifier>{c90c061d-e0d7-4b29-997b-da47e576cafa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\other">
+      <UniqueIdentifier>{93cfc465-57bd-4aca-890d-e3261ff39808}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsolePrinter.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Spielfeld.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Spielsteine.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Team.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Horizontal.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Mensch.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Spieler</Filter>
     </ClInclude>
     <ClInclude Include="Schlau.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Spieler</Filter>
     </ClInclude>
     <ClInclude Include="Spieler.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Spieler</Filter>
+    </ClInclude>
+    <ClInclude Include="Mensch.h">
+      <Filter>Headerdateien\Spieler</Filter>
     </ClInclude>
     <ClInclude Include="Vertikal.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Zufall.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="GameController.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Regelwerk.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Spieler</Filter>
     </ClInclude>
     <ClInclude Include="Enum.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Hilfsdateien und Klassen</Filter>
     </ClInclude>
     <ClInclude Include="CoordAndSuccess.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Hilfsdateien und Klassen</Filter>
+    </ClInclude>
+    <ClInclude Include="Zufall.h">
+      <Filter>Headerdateien\Spieler</Filter>
+    </ClInclude>
+    <ClInclude Include="Regelwerk.h">
+      <Filter>Headerdateien\Hilfsdateien und Klassen</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsolePrinter.h">
+      <Filter>Headerdateien\Hilfsdateien und Klassen</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Headerdateien\staticLib</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Headerdateien\staticLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Headerdateien\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Spielfeld.h">
+      <Filter>Headerdateien\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Spielsteine.h">
+      <Filter>Headerdateien\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Team.h">
+      <Filter>Headerdateien\other</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="VierGewinntGame.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsolePrinter.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Spielfeld.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Spielsteine.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Team.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Horizontal.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Mensch.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="Spieler.cpp">
+      <Filter>Quelldateien\Spieler</Filter>
     </ClCompile>
     <ClCompile Include="Schlau.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Quelldateien\Spieler</Filter>
     </ClCompile>
-    <ClCompile Include="Spieler.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="Horizontal.cpp">
+      <Filter>Quelldateien\Spieler</Filter>
+    </ClCompile>
+    <ClCompile Include="Mensch.cpp">
+      <Filter>Quelldateien\Spieler</Filter>
     </ClCompile>
     <ClCompile Include="Zufall.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Quelldateien\Spieler</Filter>
     </ClCompile>
     <ClCompile Include="Vertikal.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Quelldateien\Spieler</Filter>
     </ClCompile>
-    <ClCompile Include="GameController.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Regelwerk.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="ConsolePrinter.cpp">
+      <Filter>Quelldateien\Hilfsdateien und Klassen</Filter>
     </ClCompile>
     <ClCompile Include="CoordAndSuccess.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Quelldateien\Hilfsdateien und Klassen</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Quelldateien\Hilfsdateien und Klassen</Filter>
+    </ClCompile>
+    <ClCompile Include="Regelwerk.cpp">
+      <Filter>Quelldateien\Hilfsdateien und Klassen</Filter>
+    </ClCompile>
+    <ClCompile Include="Spielfeld.cpp">
+      <Filter>Quelldateien\other</Filter>
+    </ClCompile>
+    <ClCompile Include="Spielsteine.cpp">
+      <Filter>Quelldateien\other</Filter>
+    </ClCompile>
+    <ClCompile Include="Team.cpp">
+      <Filter>Quelldateien\other</Filter>
+    </ClCompile>
+    <ClCompile Include="VierGewinntGame.cpp">
+      <Filter>Quelldateien\other</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,7 @@
 //#include "pch.h"
 
 
-Mensch::Mensch(std::shared_ptr<Team> team, std::string name)
+Mensch::Mensch(const std::shared_ptr<const Team> team, const std::string name)
 	:Spieler(team, name)
 {
 }
@@ -13,7 +13,7 @@ Mensch::~Mensch()
 {
 }
 
-int Mensch::chooseRow(Spielfeld& spielfeld)
+int Mensch::chooseRow(const Spielfeld& spielfeld) const
 {
 	int spalte = 0;
 	setStoneMsg msg;

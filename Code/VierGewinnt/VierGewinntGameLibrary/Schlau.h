@@ -5,8 +5,8 @@ class Schlau :
     public Spieler
 {
 public:
-    Schlau(std::shared_ptr<Team> team, std::string name = "Severus Snape");
+    Schlau(const std::shared_ptr<const Team> team, const std::string name = "Severus Snape");
     ~Schlau() override;
-    int chooseRow(Spielfeld& spielfeld) override;
+    int chooseRow(const Spielfeld& spielfeld) const override;
 };
 

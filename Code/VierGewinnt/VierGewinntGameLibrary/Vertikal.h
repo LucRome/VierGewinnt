@@ -5,8 +5,8 @@ class Vertikal :
     public Spieler
 {
 public:
-    Vertikal(std::shared_ptr<Team> team, std::string name = "Gilderoy Lockhart");
+    Vertikal(const std::shared_ptr<const Team> team, const std::string name = "Gilderoy Lockhart");
     ~Vertikal() override;
-    int chooseRow(Spielfeld& spielfeld) override;
+    int chooseRow(const Spielfeld& spielfeld) const override;
 };
 

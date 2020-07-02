@@ -1,7 +1,7 @@
 #include "Schlau.h"
 //#include "pch.h"
 
-Schlau::Schlau(std::shared_ptr<Team> team, std::string name)
+Schlau::Schlau(const std::shared_ptr<const Team> team, const std::string name)
 	:Spieler(team, name)
 {
 }
@@ -11,7 +11,7 @@ Schlau::~Schlau()
 }
 
 
-int Schlau::chooseRow(Spielfeld& spielfeld)
+int Schlau::chooseRow(const Spielfeld& spielfeld) const
 {
 	return 0;
 }

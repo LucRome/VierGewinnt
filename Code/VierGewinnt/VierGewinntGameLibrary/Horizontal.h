@@ -6,8 +6,8 @@ class Horizontal :
     public Spieler
 {
 public:
-    Horizontal(std::shared_ptr<Team> team, std::string name = "Ernie Macmillan");
+    Horizontal(const std::shared_ptr<const Team> team, const std::string name = "Ernie Macmillan");
     ~Horizontal() override;
-    int chooseRow(Spielfeld& spielfeld) override;
+    int chooseRow(const Spielfeld& spielfeld) const override;
 };
 

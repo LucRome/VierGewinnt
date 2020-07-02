@@ -3,7 +3,7 @@
 #include "Spielfeld.h"
 //#include "pch.h"
 
-Vertikal::Vertikal(std::shared_ptr<Team> team, std::string name)
+Vertikal::Vertikal(const std::shared_ptr<const Team> team, const std::string name)
 	:Spieler(team, name)
 {
 }
@@ -12,7 +12,7 @@ Vertikal::~Vertikal()
 {
 }
 
-int Vertikal::chooseRow(Spielfeld& spielfeld)
+int Vertikal::chooseRow(const Spielfeld& spielfeld) const
 {
 	int spalte = 0;
 	setStoneMsg msg;

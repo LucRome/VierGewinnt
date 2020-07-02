@@ -3,7 +3,7 @@
 #include "Spieler.h"
 
 
-GameController::GameController(std::vector<std::shared_ptr<Spieler>> spieler)
+GameController::GameController(const std::vector<const std::shared_ptr<const Spieler>> spieler)
 {
 	m_spieler = spieler;
 	m_spielerDran = spieler[0];
@@ -34,17 +34,22 @@ bool GameController::playStep()
 {
 	bool win;
 	int spalte = 0;
+	
 	ConsolePrinter::printField(m_spielfeld);
 	ConsolePrinter::printMessage("Spieler: ");
 	ConsolePrinter::printMessage(m_spielerDran->getName());
+	
 	spalte = m_spielerDran->chooseRow(m_spielfeld);
 	m_coordAndSuccess = m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
+	
 	win = Regelwerk::gewonnen(m_coordAndSuccess.coordinates, m_spielfeld, *m_spielerDran->getTeam());
 	if (win == true) {
 		return win;
 	}
-	spielerwechsel();
-	return win;
+	else {
+		spielerwechsel();
+		return win;
+	}
 }
 
 void GameController::spielerwechsel()
