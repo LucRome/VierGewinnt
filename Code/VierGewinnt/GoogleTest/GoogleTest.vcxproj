@@ -83,6 +83,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary;C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\ProgramVierGewinnt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

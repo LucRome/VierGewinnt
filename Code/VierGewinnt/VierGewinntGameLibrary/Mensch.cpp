@@ -15,10 +15,17 @@ Mensch::~Mensch()
 
 int Mensch::chooseRow(const Spielfeld& spielfeld) const
 {
+	int spalte = io(spielfeld);
+	
+	return spalte;
+}
+
+int Mensch::io(const Spielfeld& spielfeld) const
+{
 	int spalte = 0;
 	setStoneMsg msg;
 	do {
-		spalte = ConsolePrinter::askValue<int>("Spalte");
+		spalte = ConsolePrinter::askValue<int>("Spalte"); 
 		msg = spielfeld.possiblePlacement(spalte);
 		if (msg == setStoneMsg::outOfBounds) {
 			ConsolePrinter::printMessage("The value of the Row is to high!");
@@ -27,6 +34,8 @@ int Mensch::chooseRow(const Spielfeld& spielfeld) const
 			ConsolePrinter::printMessage("The row is already full!");
 		}
 	} while (msg != setStoneMsg::success);
-	
+
 	return spalte;
 }
+
+

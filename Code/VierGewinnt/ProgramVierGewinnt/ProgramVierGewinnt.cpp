@@ -11,13 +11,9 @@
 #include <Vertikal.h>
 #include <Zufall.h>
 #include "Menue.h"
+#include "ConsolePrinter.h"
 
 int main() {
-	/*auto menü1 = std::make_unique<Menue>();
-	auto team1 = std::make_shared<Team>("Harald", 'b');
-	auto horizontal1 = std::make_shared<Horizontal>(team1);
-	menü1->horizontalAusgeben(horizontal1);
-	menü1->Spielbeginn();*/
 	auto menu1 = Menue();
 	menu1.Spielbeginn();
 
