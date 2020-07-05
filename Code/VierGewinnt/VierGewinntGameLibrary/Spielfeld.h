@@ -24,8 +24,8 @@ public:
 	
 
 protected:
-	static const int m_sizeSpalten = 6;
-	static const int m_sizeZeilen = 5;
+	static const int m_sizeSpalten = 5;
+	static const int m_sizeZeilen = 6;
 	Coord m_size = {m_sizeZeilen, m_sizeSpalten};
 	//static const int m_size = 4;
 	std::array<std::array<std::shared_ptr<Spielsteine>, m_sizeSpalten>, m_sizeZeilen> m_spielfeld = { nullptr };
