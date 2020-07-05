@@ -1,19 +1,20 @@
 #include "pch.h"
-#include "HelperFunctions.h"
+#include "BotHelper.h"
 #include "Spielfeld.h"
-#include "Spielsteine.h"
 #include "Team.h"
+#include "Horizontal.h"
+#include "Spielsteine.h"
 #include <memory>
 
-HelperFunctions::~HelperFunctions()
+BotHelper::BotHelper()
 {
 }
 
-HelperFunctions::~HelperFunctions()
+BotHelper::~BotHelper()
 {
 }
 
-Spielfeld HelperFunctions::setSpielfeld()
+Spielfeld BotHelper::setSpielfeld()
 {
 	Spielfeld spielfeld = Spielfeld();
 	Team team1 = Team("team1", 'x');
@@ -30,4 +31,13 @@ Spielfeld HelperFunctions::setSpielfeld()
 	};
 	spielfeld.setSpielfeldfuerTests(horizontalFeld);
 	return spielfeld;
+}
+
+int BotHelper::spalteHorizontal()
+{
+	std::shared_ptr<Team> team = std::make_shared<Team>("Test", 't');
+	Horizontal boti = Horizontal(team);
+	Spielfeld spielfeld = setSpielfeld();
+	int spalte = boti.chooseRow(spielfeld);
+	return spalte;
 }
