@@ -8,7 +8,7 @@ class Spielsteine;
 class Team
 {
 public:
-	Team(std::string name, char symbol);
+	Team(const std::string name, const char symbol);
 	~Team();
 
 	std::string getName() const;

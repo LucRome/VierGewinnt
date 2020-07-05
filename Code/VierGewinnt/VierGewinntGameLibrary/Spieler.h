@@ -8,15 +8,15 @@ class Spielfeld;
 class Spieler
 {
 public:
-	Spieler(std::shared_ptr<Team> team, std::string name);
+	Spieler(const std::shared_ptr<const Team> team, const std::string name);
 	virtual ~Spieler();
-	std::shared_ptr<Team> getTeam();
-	std::string getName();
-	virtual int chooseRow(Spielfeld& spielfeld) = 0; //Darf diese Klasse abstract sein?
+	const std::shared_ptr<const Team> getTeam() const;
+	const std::string getName() const;
+	virtual int chooseRow(const Spielfeld& spielfeld) const = 0;
 
 protected:
 	const std::string m_name;
-	const std::shared_ptr<Team> m_team;
+	const std::shared_ptr<const Team> m_team;
 
 
 };

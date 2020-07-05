@@ -8,7 +8,7 @@
 //	return c;
 //}
 
-Coord& Coord::operator+=(Coord& b)
+Coord& Coord::operator+=(const Coord& b)
 {
 	this->spalte += b.spalte;
 	this->zeile += b.zeile;
@@ -16,7 +16,7 @@ Coord& Coord::operator+=(Coord& b)
 	return *this;
 }
 
-Coord& Coord::operator-=(Coord& b)
+Coord& Coord::operator-=(const Coord& b)
 {
 	this->spalte -= b.spalte;
 	this->zeile -= b.zeile;

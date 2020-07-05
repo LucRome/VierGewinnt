@@ -1,7 +1,7 @@
 #include "Spieler.h"
 //#include "pch.h"
 
-Spieler::Spieler(std::shared_ptr<Team> team, std::string name)
+Spieler::Spieler(const std::shared_ptr<const Team> team, const std::string name)
 	:m_name(name)
 	,m_team(team)
 {
@@ -11,12 +11,12 @@ Spieler::~Spieler()
 {
 }
 
-std::shared_ptr<Team> Spieler::getTeam()
+const std::shared_ptr<const Team> Spieler::getTeam() const
 {
 	return m_team;
 }
 
-std::string Spieler::getName()
+const std::string Spieler::getName() const
 {
 	return m_name;
 }

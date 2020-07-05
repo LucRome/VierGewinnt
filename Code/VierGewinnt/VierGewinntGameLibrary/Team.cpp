@@ -1,7 +1,7 @@
 //#include "pch.h"
 #include "Team.h"
 
-Team::Team(std::string name, char symbol)
+Team::Team(const std::string name, const char symbol)
 	:m_symbol(symbol)
 	,m_name(name)
 {

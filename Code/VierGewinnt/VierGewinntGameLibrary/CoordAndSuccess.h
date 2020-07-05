@@ -8,8 +8,8 @@ struct Coord //Coord: {zeile, spalte}
 
 public:
 	//Coord& operator+(Coord& b); //nicht verwendet
-	Coord& operator+=(Coord& b);
-	Coord& operator-=(Coord& b);
+	Coord& operator+=(const Coord& b);
+	Coord& operator-=(const Coord& b);
 };
 
 struct CoordAndSuccess {

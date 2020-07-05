@@ -5,8 +5,8 @@ class Zufall :
     public Spieler
 {
 public:
-    Zufall(std::shared_ptr<Team> team, std::string name = "Luna Lovegood");
+    Zufall(const std::shared_ptr<const Team> team, const std::string name = "Luna Lovegood");
     ~Zufall() override;
-    int chooseRow(Spielfeld& spielfeld) override;
+    int chooseRow(const Spielfeld& spielfeld) const override;
 };
 

@@ -8,7 +8,7 @@
 
 
 
-Zufall::Zufall(std::shared_ptr<Team> team, std::string name)
+Zufall::Zufall(const std::shared_ptr<const Team> team, const std::string name)
 	:Spieler(team, name)
 {
 	srand(time(NULL)); //eventuell muss der Seed wo anders gesetzt werden.. glaube aber hier ist gut
@@ -19,7 +19,7 @@ Zufall::~Zufall()
 {
 }
 
-int Zufall::chooseRow(Spielfeld& spielfeld)
+int Zufall::chooseRow(const Spielfeld& spielfeld) const
 {
 	int spalte=2;
 	setStoneMsg msg;

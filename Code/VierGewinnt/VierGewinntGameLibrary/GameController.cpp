@@ -34,17 +34,22 @@ bool GameController::playStep()
 {
 	bool win;
 	int spalte = 0;
-	ConsolePrinter::printField(m_spielfeld);
+	
+	ConsolePrinter::printField(constFeld);
 	ConsolePrinter::printMessage("Spieler: ");
 	ConsolePrinter::printMessage(m_spielerDran->getName());
-	spalte = m_spielerDran->chooseRow(m_spielfeld);
+	
+	spalte = m_spielerDran->chooseRow(constFeld);
 	m_coordAndSuccess = m_spielfeld.placeStone(*m_spielerDran->getTeam(), spalte);
-	win = Regelwerk::gewonnen(m_coordAndSuccess.coordinates, m_spielfeld, *m_spielerDran->getTeam());
+	
+	win = Regelwerk::gewonnen(m_coordAndSuccess.coordinates, constFeld, *m_spielerDran->getTeam());
 	if (win == true) {
 		return win;
 	}
-	spielerwechsel();
-	return win;
+	else {
+		spielerwechsel();
+		return win;
+	}
 }
 
 void GameController::spielerwechsel()

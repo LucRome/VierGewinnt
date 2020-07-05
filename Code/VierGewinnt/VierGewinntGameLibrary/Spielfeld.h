@@ -16,10 +16,10 @@ public:
 	~Spielfeld();
 	bool isVoll() const;
 	Coord getSize() const;
-	CoordAndSuccess placeStone(Team& team, int x); //noch sichergehen, dass ein Team nur 1x setzt
-	setStoneMsg possiblePlacement(int spalte);
-	std::shared_ptr<Spielsteine> getPosition(Coord coordinates) const; //Coord: {zeile, spalte}
-	int getLowestLevel(int spalte);
+	CoordAndSuccess placeStone(const Team& team, const int x); //noch sichergehen, dass ein Team nur 1x setzt
+	setStoneMsg possiblePlacement(const int spalte) const;
+	std::shared_ptr<Spielsteine> getPosition(const Coord coordinates) const; //Coord: {zeile, spalte}
+	int getLowestLevel(const int spalte) const;
 
 	
 
