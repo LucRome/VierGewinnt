@@ -1,0 +1,27 @@
+﻿  ConsolePrinter.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\ConsolePrinter.cpp(34,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  GameController.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\GameController.cpp(42,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Horizontal.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Horizontal.cpp(17,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Mensch.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Mensch.cpp(33,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Regelwerk.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Regelwerk.cpp(184,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Schlau.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Schlau.cpp(18,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Spieler.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Spieler.cpp(23,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Spielfeld.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Spielfeld.cpp(71,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Spielsteine.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Spielsteine.cpp(23,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Team.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Team.cpp(23,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Vertikal.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Vertikal.cpp(17,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  VierGewinntGame.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\VierGewinntGame.cpp(11,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Zufall.cpp
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\VierGewinntGameLibrary\Zufall.cpp(16,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Code wird generiert...

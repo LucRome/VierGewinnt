@@ -2,15 +2,6 @@
 Code/.vs/
 .git/
 .vs/
-*.db
-*.ipch
-*.obj
-*.idb
-*.log
-*.pdb
-*.tlog
-*.pch
-*.TMP
 /Code/VierGewinnt/VierGewinntGameLibrary/x64/Debug
 /Code/VierGewinnt/enc_temp_folder/ac3132eaa113e2b728742af8cf93166
 Code/VierGewinnt/x64/Debug/ProgramVierGewinnt.exe
