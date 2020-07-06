@@ -12,7 +12,7 @@ Vertikal::~Vertikal()
 {
 }
 
-int Vertikal::chooseRow(const Spielfeld& spielfeld) const
+int Vertikal::chooseRow(const Spielfeld& spielfeld)
 {
 	int spalte = 0;
 	setStoneMsg msg;

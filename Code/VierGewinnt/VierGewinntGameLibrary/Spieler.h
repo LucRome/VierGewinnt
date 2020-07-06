@@ -12,7 +12,7 @@ public:
 	virtual ~Spieler();
 	const std::shared_ptr<const Team> getTeam() const;
 	const std::string getName() const;
-	virtual int chooseRow(const Spielfeld& spielfeld) const = 0;
+	virtual int chooseRow(const Spielfeld& spielfeld) = 0;
 
 protected:
 	const std::string m_name;

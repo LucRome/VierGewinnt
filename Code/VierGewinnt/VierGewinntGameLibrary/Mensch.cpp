@@ -13,7 +13,7 @@ Mensch::~Mensch()
 {
 }
 
-int Mensch::chooseRow(const Spielfeld& spielfeld) const
+int Mensch::chooseRow(const Spielfeld& spielfeld)
 {
 	int spalte = 0;
 	setStoneMsg msg;

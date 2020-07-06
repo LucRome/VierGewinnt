@@ -1,5 +1,4 @@
 #include "Schlau.h"
-#include "CoordAndSuccess.h"
 #include "Spielfeld.h"
 //#include "pch.h"
 
@@ -13,16 +12,16 @@ Schlau::~Schlau()
 }
 
 
-int Schlau::chooseRow(const Spielfeld& spielfeld) const
+int Schlau::chooseRow(const Spielfeld& spielfeld)
 {
 	//testen ob GegnerTeam herausgefunden werden muss
-	if (enemyTeamModel.getSymbol() == ' ') {
-
+	if (m_enemyTeamSymbol == ' ') {
+		setEnemyTeam(spielfeld);
 	}
-	;
+	return 0;
 }
 
-void Schlau::setEnemyTeamSymbol(const Spielfeld& spielfeld)
+void Schlau::setEnemyTeam(const Spielfeld& spielfeld)
 {
 	const Coord size = spielfeld.getSize();
 	for (int zeile = 0; zeile < size.zeile; zeile++) {

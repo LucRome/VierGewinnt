@@ -1,1 +1,3 @@
 Die ganzen Funktionsaufrufe noch mit Coord statt mit zeile und spalte machen
+
+Größe des Spielfelds in extra Datei auslagern -> für alle Arrays die davon abhängen verwenden

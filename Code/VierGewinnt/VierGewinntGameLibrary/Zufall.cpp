@@ -19,7 +19,7 @@ Zufall::~Zufall()
 {
 }
 
-int Zufall::chooseRow(const Spielfeld& spielfeld) const
+int Zufall::chooseRow(const Spielfeld& spielfeld)
 {
 	int spalte=2;
 	setStoneMsg msg;
