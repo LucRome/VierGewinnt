@@ -1,4 +1,6 @@
 #include "Schlau.h"
+#include "CoordAndSuccess.h"
+#include "Spielfeld.h"
 //#include "pch.h"
 
 Schlau::Schlau(const std::shared_ptr<const Team> team, const std::string name)
@@ -13,5 +15,17 @@ Schlau::~Schlau()
 
 int Schlau::chooseRow(const Spielfeld& spielfeld) const
 {
-	return 0;
+	//testen ob GegnerTeam herausgefunden werden muss
+	if (enemyTeamModel.getSymbol() == ' ') {
+
+	}
+	;
+}
+
+void Schlau::setEnemyTeamSymbol(const Spielfeld& spielfeld)
+{
+	const Coord size = spielfeld.getSize();
+	for (int zeile = 0; zeile < size.zeile; zeile++) {
+
+	}
 }
