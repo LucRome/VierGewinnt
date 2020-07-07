@@ -2,6 +2,7 @@
 #include "Spieler.h"
 #include "Team.h"
 #include <array>
+#include <queue>
 #include "CoordAndSuccess.h"
 //#include "pch.h"
 class Schlau :
@@ -15,11 +16,18 @@ public:
 private:
     void setEnemyTeam(const Spielfeld& spielfeld);
 
-    char m_enemyTeamSymbol = ' ';
+    int m_maxEnemyStreak = 3;
 
-    static const int spielfeldSizeZeile; //muss verändert werden wenn Spielfeld größe Ändert
+    std::shared_ptr<Team> m_enemyTeamModel;
+
+    static const int spielfeldSizeZeile; //muss verändert werden wenn Spielfeld größe Ändert, momentan unnütz
     //6 ersetzen durch Spaltenzahl des Spielfelds
     std::array<int, 6> heights = { 0 };
-    std::array<int, 6> streaksFriendly = { 0 };
-    std::array<int, 6> streaksEnemy = { 0 };
+
+    std::priority_queue<SpalteAndStreak> streaksFriendly;
+    std::priority_queue<SpalteAndStreak> streaksEnemy;
+
+    bool cmpSpalteAndStreakGreaterStreak(const SpalteAndStreak& a, const SpalteAndStreak& b);
+
+    //Priority Queue CPP Reference: https://en.cppreference.com/w/cpp/container/priority_queue
 };

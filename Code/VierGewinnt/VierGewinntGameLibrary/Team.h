@@ -14,8 +14,6 @@ public:
 	std::string getName() const;
 	char getSymbol() const;
 
-
-
 protected:
 	const std::string m_name;
 	const char m_symbol;

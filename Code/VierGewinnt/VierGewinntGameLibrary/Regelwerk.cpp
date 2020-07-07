@@ -181,12 +181,13 @@ int Regelwerk::umgebungInt(const Coord coordinates, Coord deltas, const Spielfel
 	deltas.zeile = -deltas.zeile;
 	cnt2 = countNeighbours(coordinates, deltas, m_spielfeld, team);
 
-	if (cnt1 < cnt2) {
+	/*if (cnt1 < cnt2) {
 		return cnt2;
 	}
 	else {
 		return cnt1;
-	}
+	}*/
+	return cnt1 + cnt2;
 }
 
 
