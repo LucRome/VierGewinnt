@@ -28,6 +28,11 @@ Coord Spielfeld::getSize() const
 }
 
 
+Coord Spielfeld::getSizeStatic()
+{
+    return { m_sizeZeilen, m_sizeSpalten };
+}
+
 CoordAndSuccess Spielfeld::placeStone(const Team& team, const int spalte)
 {
     CoordAndSuccess msg;

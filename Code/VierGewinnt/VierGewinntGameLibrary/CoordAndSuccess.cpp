@@ -23,3 +23,13 @@ Coord& Coord::operator-=(const Coord& b)
 
 	return *this;
 }
+
+bool SpalteAndStreak::operator>(const SpalteAndStreak& b)
+{
+	return this->streak > b.streak;
+}
+
+bool SpalteAndStreak::operator<(const SpalteAndStreak& b) const
+{
+	return this->streak < b.streak;
+}

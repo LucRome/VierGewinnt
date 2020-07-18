@@ -153,6 +153,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="Horizontal.h" />
+    <ClInclude Include="LevelAndNeighbours.h" />
     <ClInclude Include="Mensch.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Regelwerk.h" />

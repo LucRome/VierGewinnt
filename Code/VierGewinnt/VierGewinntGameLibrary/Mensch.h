@@ -9,6 +9,6 @@ class Mensch :
 public:
     Mensch(const std::shared_ptr<const Team> team, const std::string name);
     ~Mensch() override;
-    int chooseRow(const Spielfeld& spielfeld) const override;
+    int chooseRow(const Spielfeld& spielfeld) override;
 };
 
