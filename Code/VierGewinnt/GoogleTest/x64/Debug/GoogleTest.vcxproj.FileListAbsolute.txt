@@ -1,1 +1,2 @@
 C:\Users\Admin\Documents\GitHub\VierGewinnt\Code\VierGewinnt\GoogleTest\x64\Debug\GoogleTest.vcxproj.CopyComplete
+C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\GoogleTest\x64\Debug\GoogleTest.vcxproj.CopyComplete

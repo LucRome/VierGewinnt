@@ -20,6 +20,7 @@ public:
 	setStoneMsg possiblePlacement(const int spalte) const;
 	std::shared_ptr<Spielsteine> getPosition(const Coord coordinates) const; //Coord: {zeile, spalte}
 	int getLowestLevel(const int spalte) const;
+	void setSpielfeldfuerTests(std::array<std::array<std::shared_ptr<Spielsteine>, 5>, 6> feld);
 
 	
 

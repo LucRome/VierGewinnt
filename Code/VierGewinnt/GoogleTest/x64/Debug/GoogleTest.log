@@ -2,5 +2,5 @@
   HelperFunctions.cpp
   test.cpp
   Code wird generiert...
-  LINK : Programmdatenbank "C:\Users\Admin\Documents\GitHub\VierGewinnt\Code\VierGewinnt\x64\Debug\GoogleTest.pdb" fehlt; vollständiger Link wird durchgeführt.
-  GoogleTest.vcxproj -> C:\Users\Admin\Documents\GitHub\VierGewinnt\Code\VierGewinnt\x64\Debug\GoogleTest.exe
+  LINK : C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\x64\Debug\GoogleTest.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollständiger Link wird durchgeführt.
+  GoogleTest.vcxproj -> C:\Users\Miriam\Documents\GitHub\VierGewinnt\Code\VierGewinnt\x64\Debug\GoogleTest.exe

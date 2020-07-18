@@ -72,3 +72,10 @@ int Spielfeld::getLowestLevel(const int spalte) const
         }
     }
 }
+
+void Spielfeld::setSpielfeldfuerTests(std::array<std::array<std::shared_ptr<Spielsteine>, 5>, 6> feld)
+{
+    m_spielfeld = feld;
+}
+
+

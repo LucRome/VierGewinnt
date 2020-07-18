@@ -1,6 +1,7 @@
 #include "pch.h"
+#include "HelperFunctions.h"
 
+HelperFunctions hf = HelperFunctions();
 TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+  EXPECT_EQ(0, hf.spalteHorizontal());
 }
